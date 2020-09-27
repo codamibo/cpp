@@ -6,21 +6,20 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/09/20 22:18:44 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/09/27 23:24:21 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/09/27 23:34:08 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanB.hpp"
 
-// HumanB::HumanB()
-// {
-// 	std::cout << "HumanB alive" << std::endl;
-// 	return ;
-// }
+HumanB::HumanB(void)
+{
+	std::cout << "HumanB alive" << std::endl;
+	return ;
+}
 
 HumanB::HumanB(std::string s) : first_name(s)
 {
-	this->weaponPtr = NULL;
 	std::cout << "HumanB alive" << std::endl;
 	return ;
 }
