@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/09/12 17:10:14 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/09/27 23:29:03 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/09/28 08:54:44 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class	Human{
 		Human(void);
 		~Human(void);
 		std::string 		identify(void);
-		Brain				getBrain(void);
+		Brain const&		getBrain(void);
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/09/20 22:18:39 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/09/27 23:24:57 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/09/28 08:43:42 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,6 @@ int		main(void)
 		club.setType("some other type of club");
 		jim.attack();
 	}
+	
 	return (0);
 }

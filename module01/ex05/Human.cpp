@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/09/12 17:10:11 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/09/20 22:16:08 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/09/28 08:59:32 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,10 @@ std::string		Human::identify(void)
 	return (this->brain.identify());
 }
 
-Brain			Human::getBrain(void)
+//to not make copy of this->brain but reference to object
+//so that brain will not be destructed here
+Brain const&	Human::getBrain(void)
 {
-	return (this->brain);
+	Brain const& brainRef = this->brain;
+	return (brainRef);
 }

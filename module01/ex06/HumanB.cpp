@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/09/20 22:18:44 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/09/27 23:34:08 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/09/28 08:50:05 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,8 @@ std::string const&	HumanB::getWeaponType(void)
 	return (this->weaponPtr->getType());
 }
 
+//&w: reference can be set to w and otherwise first weapon club
+//is broken down as copy of club will be made
 void		HumanB::setWeapon(Weapon& w)
 {
 	this->weaponPtr = &w;
