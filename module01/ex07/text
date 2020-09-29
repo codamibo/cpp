@@ -1,0 +1,3 @@
+public inheritance makes public members of the base class
+public in the derived class, and the protected members of the base
+class remain protected in the derived class.
