@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/09/30 00:21:43 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/09/30 00:59:33 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/09/30 01:03:29 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,5 @@ int		main(int argc, char **argv)
 		}
 		std::cout << std::endl;
 	}
-	
 	return (0);
 }
