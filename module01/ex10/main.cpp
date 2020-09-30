@@ -6,14 +6,24 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/09/30 00:21:43 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/09/30 01:03:29 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/09/30 18:35:49 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <fstream>
+#include <iomanip>
 
-int		main(int argc, char **argv)
+std::string unquote(std::string s)
+{
+	std::string res;
+
+	std::istringstream ss(s);
+	ss >> std::quoted(res);
+	return (res);
+}
+
+int			main(int argc, char **argv)
 {
 	std::string s;
 	int			i;
@@ -40,8 +50,8 @@ int		main(int argc, char **argv)
 			if (second == 0)
 				second = 1;
 			else
-				std::cout << std::endl;			
-			std::ifstream file(argv[i]);
+				std::cout << std::endl;
+			std::ifstream file(unquote(argv[i]));
 			if (!file.is_open())
 			{
 				std::cout << "cato9tails: " << argv[i] << ": No such file or directory";
