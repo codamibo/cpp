@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/09/28 09:06:01 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/09/30 00:01:16 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/09/30 21:21:01 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ int		main(int argc, char **argv)
 		return(ret(&input_file, &output_file, "Wrong number of arguments"));
 	s1 = argv[2];
 	s2 = argv[3];
+	if (s1.length() == 0 || s2.length() == 0)
+		return(ret(&input_file, &output_file, "Strings cannot be empty"));
 	input_file.open(argv[1]);
 	output_file.open(strcat(argv[1], ".replace"));
 	if (!(input_file.is_open()) || !(output_file.is_open()))
