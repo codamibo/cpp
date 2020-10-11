@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/10 11:29:42 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/10/10 14:47:43 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/10/11 16:22:14 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,19 @@
 
 int		main(void)
 {
-	int		a = 9;
-	int		b = 0;
-
-	(void)a;
-	b = a << 8;
-	// printf("%.40f\n", );
-	std::cout << b << std::endl;
-	b = roundf(b / 2);
-	std::cout << "na berekinging1: " << b << std::endl;
-	b = roundf(b >> 8);
-	std::cout << "na berekinging2: " << b << std::endl;
-	std::cout << (float)a*2*2*2*2*2*2*2*2 << std::endl;
+	Fixed a;
+	Fixed const b( 10 );
+	Fixed const c( 42.42f );
+	Fixed const d( b );
+	
+	a = Fixed( 1234.4321f );
+	std::cout << "a is " << a << std::endl;
+	std::cout << "b is " << b << std::endl;
+	std::cout << "c is " << c << std::endl;
+	std::cout << "d is " << d << std::endl;
+	std::cout << "a is " << a.toInt() << " as integer" << std::endl;
+	std::cout << "b is " << b.toInt() << " as integer" << std::endl;
+	std::cout << "c is " << c.toInt() << " as integer" << std::endl;
+	std::cout << "d is " << d.toInt() << " as integer" << std::endl;
 	return (0);
 }
