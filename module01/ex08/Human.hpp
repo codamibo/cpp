@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/09/30 19:53:11 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/09/30 19:59:31 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/10/16 16:44:15 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class Human{
 		void meleeAttack(std::string const & target);
 		void rangedAttack(std::string const & target);
 		void intimidatingShout(std::string const & target);
-	
+
 	public:
 		Human(void);
 		~Human(void);

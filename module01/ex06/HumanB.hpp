@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/09/20 22:18:41 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/09/28 08:48:05 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/10/16 16:28:39 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class	HumanB{
 	private:
 		std::string			first_name;
 		Weapon*				weaponPtr;
-		//pointer here since object weapon may not exist in the beginning
+		//pointer in HumanB since object weapon may not exist in the beginning
 		//and might point to another Weapon object later on
 	
 	public:

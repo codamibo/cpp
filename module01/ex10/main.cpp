@@ -6,22 +6,15 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/09/30 00:21:43 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/09/30 18:35:49 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/10/16 17:24:32 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <fstream>
 #include <iomanip>
-
-std::string unquote(std::string s)
-{
-	std::string res;
-
-	std::istringstream ss(s);
-	ss >> std::quoted(res);
-	return (res);
-}
+#include <sstream>
+#include <string>
 
 int			main(int argc, char **argv)
 {
@@ -38,9 +31,13 @@ int			main(int argc, char **argv)
 	{
 		while (1)
 		{
-			std::cin >> s;
-			std::cout << s;
-			std::cout << std::endl;
+			getline(std::cin, s);
+			if (s.length() == 0)
+			{
+				std::cout << std::endl;
+				break ;
+			}
+			std::cout << s << std::endl;
 		}
 	}
 	else
@@ -51,7 +48,7 @@ int			main(int argc, char **argv)
 				second = 1;
 			else
 				std::cout << std::endl;
-			std::ifstream file(unquote(argv[i]));
+			std::ifstream file(argv[i]);
 			if (!file.is_open())
 			{
 				std::cout << "cato9tails: " << argv[i] << ": No such file or directory";

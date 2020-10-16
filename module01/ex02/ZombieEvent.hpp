@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/09/10 15:00:50 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/09/11 11:05:48 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/10/16 15:13:09 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@
 class	ZombieEvent{
 	private:
 		std::string		type;
-		int				seed_once;
 		
 	public:
 		ZombieEvent(void);

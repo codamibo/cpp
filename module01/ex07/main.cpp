@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/09/28 09:06:01 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/09/30 21:21:01 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/10/16 16:39:23 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,11 +54,11 @@ int		main(int argc, char **argv)
 			if (found != std::string::npos)
 			{
 				output_file << buffer.substr(start, found - start);
-				start = found + s1.length();
 				output_file << s2;
+				start = found + s1.length();
 			}
 			else
-			 	output_file << buffer.substr(start, buffer.length() - start) << std::endl;			
+			 	output_file << buffer.substr(start, buffer.length() - start) << std::endl;
 		}
 	}
 	input_file.close();

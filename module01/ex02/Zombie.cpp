@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/09/10 14:58:09 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/09/11 19:43:11 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/10/16 14:17:29 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ Zombie::~Zombie(void){
 	return ;
 }
 
-void		Zombie::announce(void)
+void		Zombie::announce(void) const
 {
 	std::cout << "<" << this->name << " (" << this->type << ")> BRAIINSSSS" << std::endl;
 	return ;

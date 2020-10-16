@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/09/10 15:00:53 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/09/11 19:55:31 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/10/16 15:15:14 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 ZombieEvent::ZombieEvent(void)
 {
-	this->seed_once = 0;
+	std::srand(rand() + time(0)); //compile in same second->same seed value
 	return ;
 }
 
@@ -41,11 +41,6 @@ Zombie*			ZombieEvent::randomChump(void)
 	int			random_index;
 	
 	std::string names[10] = {"Zoom", "Human", "Zombiewombie", "Bi", "Zombert", "ZOMBIE", "Zzzzzzz", "Eibmoz", "Zombie", "Zombiezombie"};
-	if (this->seed_once == 0)
-	{
-		std::srand(time(0)); //same second->same seed value
-		this->seed_once = 1;
-	}
 	random_index = std::rand() % 10;
 	return (newZombie(names[random_index]));
 }

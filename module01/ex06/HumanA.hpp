@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/09/20 22:18:43 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/09/27 23:27:33 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/10/16 16:28:48 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class	HumanA{
 	private:
 		std::string			first_name;
 		Weapon&				weaponRef; 
-		//reference used here since object weapon is always here, from the
+		//reference used in HumanA since object weapon is always here, from the
 		//beginning and should always point to the same object
 	
 	public:
