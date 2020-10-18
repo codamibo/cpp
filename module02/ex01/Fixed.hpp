@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/10 11:37:42 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/10/11 15:57:10 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/10/18 22:44:52 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class Fixed{
 	private:
 		int					raw_bits;
 		static const int	frac_bits = 8;
-	
+
 	public:
 		Fixed(void);
 		Fixed(int const n);
@@ -35,6 +35,6 @@ class Fixed{
 		int					toInt(void) const;
 };
 
-std::ostream &				operator<<(std::ostream & output, Fixed const &rsh);
+std::ostream &				operator<<(std::ostream & output, Fixed const &rhs);
 
 #endif

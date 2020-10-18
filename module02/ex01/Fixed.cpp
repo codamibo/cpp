@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/10 11:37:47 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/10/11 16:20:45 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/10/18 22:41:59 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ void				Fixed::setRawBits(int const raw)
 }
 
 int					Fixed::toInt(void) const{
-	return (this->raw_bits >> 8);
+	return (this->raw_bits >> this->frac_bits);
 }
 
 float				Fixed::toFloat(void) const
@@ -76,8 +76,8 @@ Fixed &				Fixed::operator=(Fixed const & rsh)
 	return (*this);
 }
 
-std::ostream &		operator<<(std::ostream & output, Fixed const &rsh)
+std::ostream &		operator<<(std::ostream & output, Fixed const &rhs)
 {
-	output << rsh.toFloat();
+	output << rhs.toFloat();
 	return output;
 }

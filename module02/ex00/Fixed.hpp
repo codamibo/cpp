@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/10 11:37:42 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/10/10 13:59:45 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/10/18 12:13:32 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,16 @@
 
 class Fixed{
 	private:
-		int					fp_value;
+		int					raw_bits;
 		static const int	frac_bits = 8;
 	
 	public:
 		Fixed(void);
-		Fixed(Fixed const & src);
+		Fixed(Fixed const & src); //copy constructor
 		~Fixed(void);
-		Fixed & operator=(Fixed const & rhs);
+		Fixed & operator=(Fixed const & rhs); //assignment operator
 		int		getRawBits(void) const;
-		void	setRawBits(int const raw);	
+		void	setRawBits(int const raw);
 };
 
 #endif
