@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   FragTrap.hpp                                       :+:    :+:            */
+/*   ScavTrap.hpp                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/10/12 09:26:55 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/10/19 23:22:50 by iboeters      ########   odam.nl         */
+/*   Created: 2020/10/20 23:14:32 by iboeters      #+#    #+#                 */
+/*   Updated: 2020/10/20 23:18:26 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_HPP
-# define FRAGTRAP_HPP
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
 
 #include <iostream>
 #include <string>
 #include <cstdlib>
 
-class FragTrap{
+class ScavTrap{
 	private:
 		std::string		name;
 		int				hitpoints;
@@ -30,11 +30,11 @@ class FragTrap{
 		int				armor_damage_reduction;
 	
 	public:
-		FragTrap(void);
-		FragTrap(std::string n);
-		FragTrap(FragTrap const & src); //copy constructor
-		~FragTrap(void);
-		FragTrap & 		operator=(FragTrap const & rhs); //assignment operator
+		ScavTrap(void);
+		ScavTrap(std::string n);
+		ScavTrap(ScavTrap const & src); //copy constructor
+		~ScavTrap(void);
+		ScavTrap & 		operator=(ScavTrap const & rhs); //assignment operator
 		int				get_hitpoints(void) const;
 		int				get_max_hit_points(void) const;
 		int				get_energy_points(void) const;
@@ -51,7 +51,7 @@ class FragTrap{
 		void			cyberAttack(std::string const & target);
 		void			takeDamage(unsigned int amount);
 		void			beRepaired(unsigned int amount);
-		void			vaulthunter_dot_exe(std::string const & target);	
+		// void			vaulthunter_dot_exe(std::string const & target);
 };
 
 #endif
