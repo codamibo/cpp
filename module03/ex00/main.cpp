@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/12 09:27:03 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/10/20 23:12:53 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/10/21 10:48:24 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ int			main(void)
 	trap3.vaulthunter_dot_exe("E");
 	trap3.vaulthunter_dot_exe("T");
 	std::cout << "\033[1;31mTaking damage\033[0m" << std::endl;
+	trap3.takeDamage(-1);
 	trap3.takeDamage(30);
 	trap3.takeDamage(30);
 	trap3.takeDamage(30);

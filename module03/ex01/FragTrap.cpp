@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/20 23:14:41 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/10/20 23:16:00 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/10/26 10:17:44 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -137,8 +137,9 @@ void			FragTrap::vaulthunter_dot_exe(std::string const & target)
 			&FragTrap::deadAttack,
 			&FragTrap::cyberAttack
 		};
+		std::srand(rand() + time(0));
 		fraction = 1 / (float)RAND_MAX;
-		index = (fraction * std::rand()) * 5; // fraction * std::rand() number between 0 and 1
+		index = (fraction * std::rand()) * (sizeof(attacks) / sizeof(attacks[0])); // fraction * std::rand() number between 0 and 1
 		(this->*attacks[(int)index])(target);
 	}	
 }

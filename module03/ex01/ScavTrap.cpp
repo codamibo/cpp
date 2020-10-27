@@ -6,13 +6,13 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/20 23:14:35 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/10/20 23:26:05 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/10/26 10:20:30 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
-// const and dest -------------------------------------------------------------
+// const and dest classes--------------------------------------------------------
 ScavTrap::ScavTrap(void) : name("DefaultScav"),
 	hitpoints(100),
 	max_hit_points(100),
@@ -68,27 +68,27 @@ ScavTrap &		ScavTrap::operator=(ScavTrap const & rsh)
 // attack functions --------------------------------------------------------
 void			ScavTrap::rangedAttack(std::string const & target)
 {
-	std::cout << "FR4G-TP " << this->name << " attacks " << target << " at range, causing " << this->ranged_attack_damage << " points of damage!" << std::endl;
+	std::cout << "SC4V-TP " << this->name << " attacks " << target << " at range, causing " << this->ranged_attack_damage << " points of damage!" << std::endl;
 }
 
 void			ScavTrap::meleeAttack(std::string const & target)
 {
-	std::cout << "FR4G-TP " << this->name << " attacks " << target << " at short range, causing " << this->melee_attack_damage << " points of damage!" << std::endl;
+	std::cout << "SC4V-TP " << this->name << " attacks " << target << " at short range, causing " << this->melee_attack_damage << " points of damage!" << std::endl;
 }
 
 void			ScavTrap::speedAttack(std::string const & target)
 {
-	std::cout << "FR4G-TP " << this->name << " attacks " << target << " with speed, causing 10 points of damage!" << std::endl;
+	std::cout << "SC4V-TP " << this->name << " attacks " << target << " with speed, causing 10 points of damage!" << std::endl;
 }
 
 void			ScavTrap::deadAttack(std::string const & target)
 {
-	std::cout << "FR4G-TP " << this->name << " attacks " << target << " deadly, causing 100 points of damage!" << std::endl;
+	std::cout << "SC4V-TP " << this->name << " attacks " << target << " deadly, causing 100 points of damage!" << std::endl;
 }
 
 void			ScavTrap::cyberAttack(std::string const & target)
 {
-	std::cout << "FR4G-TP " << this->name << " performs a cyber attack on " << target << " causing 25 points of damage!" << std::endl;
+	std::cout << "SC4V-TP " << this->name << " performs a cyber attack on " << target << " causing 25 points of damage!" << std::endl;
 }
 
 // other member functions ---------------------------------------------------
@@ -103,10 +103,10 @@ void			ScavTrap::takeDamage(unsigned int amount)
 		this->hitpoints -= red;
 	else
 	{
-		std::cout << "FR4G-TP " << this->name << " is protected by its armor" << std::endl;
+		std::cout << "SC4V-TP " << this->name << " is protected by its armor" << std::endl;
 		return ;
 	}
-	std::cout << "FR4G-TP " << this->name << " is attacked and has " << this->hitpoints << " hitpoints left" << std::endl;
+	std::cout << "SC4V-TP " << this->name << " is attacked and has " << this->hitpoints << " hitpoints left" << std::endl;
 }
 
 void			ScavTrap::beRepaired(unsigned int amount)
@@ -115,7 +115,25 @@ void			ScavTrap::beRepaired(unsigned int amount)
 		this->hitpoints = this->max_hit_points; // HP cannot exceed max_hit_points
 	else
 		this->hitpoints += amount;
-	std::cout << "FR4G-TP " << this->name << " is repaired and has " << this->hitpoints << " hitpoints left" << std::endl;	
+	std::cout << "SC4V-TP " << this->name << " is repaired and has " << this->hitpoints << " hitpoints left" << std::endl;	
+}
+
+void			ScavTrap::challengeNewcomer(std::string const & target) const
+{
+	float	index;
+	float	fraction;
+
+	std::string challenges[5]{
+		"You versus me! Me versus you! Either way!",
+		"I will prove to you my robotic superiority!",
+		"Dance battle! Or, you know... regular battle.",
+		"Man versus machine! Very tiny streamlined machine!",
+		"Care to have a friendly duel?"
+	};
+	std::srand(rand() + time(0));
+	fraction = 1 / (float)RAND_MAX;
+	index = (fraction * std::rand()) * (sizeof(challenges) / sizeof(challenges[0])); // fraction * std::rand() gives random number between 0 and 1
+	std::cout << "SC4V-TP " << this->name << " challenges " << target << ": " << challenges[(int)index] << std::endl;
 }
 
 // getters -----------------------------------------------------------------

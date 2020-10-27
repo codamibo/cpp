@@ -6,12 +6,11 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/10 11:37:47 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/10/18 22:41:59 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/10/19 21:55:48 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
-
 
 Fixed::Fixed(void)
 {

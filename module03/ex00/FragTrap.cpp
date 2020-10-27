@@ -6,13 +6,13 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/12 09:26:58 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/10/20 23:08:18 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/10/26 10:17:24 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
-// const and dest -------------------------------------------------------------
+// const and dest classes-------------------------------------------------------
 FragTrap::FragTrap(void) : name("DefaultFrag"),
 	hitpoints(100),
 	max_hit_points(100),
@@ -137,8 +137,9 @@ void			FragTrap::vaulthunter_dot_exe(std::string const & target)
 			&FragTrap::deadAttack,
 			&FragTrap::cyberAttack
 		};
+		std::srand(rand() + time(0));
 		fraction = 1 / (float)RAND_MAX;
-		index = (fraction * std::rand()) * 5; // fraction * std::rand() number between 0 and 1
+		index = (fraction * std::rand()) * (sizeof(attacks) / sizeof(attacks[0])); // fraction * std::rand() number between 0 and 1
 		(this->*attacks[(int)index])(target);
 	}	
 }

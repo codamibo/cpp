@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/20 23:14:32 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/10/20 23:18:26 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/10/21 10:55:55 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ class ScavTrap{
 		void			cyberAttack(std::string const & target);
 		void			takeDamage(unsigned int amount);
 		void			beRepaired(unsigned int amount);
-		// void			vaulthunter_dot_exe(std::string const & target);
+		void			challengeNewcomer(std::string const & target) const;
 };
 
 #endif
