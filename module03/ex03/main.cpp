@@ -6,13 +6,9 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/20 23:14:37 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/12/02 16:08:40 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/12/02 16:19:16 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
-
-
-//fix class specific functions fragtrap
-//check hitpoints ninja for 5
 
 #include "FragTrap.hpp"
 #include "ScavTrap.hpp"
