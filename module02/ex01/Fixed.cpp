@@ -6,11 +6,12 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/10 11:37:47 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/11/30 19:01:30 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/12/01 16:07:15 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
+#include <bitset>
 
 Fixed::Fixed(void)
 {
@@ -22,14 +23,13 @@ Fixed::Fixed(void)
 Fixed::Fixed(int const n)
 {
 	std::cout << "Int constructor called" << std::endl;
-	std::cout << "Int before = " << std::endl << std::bitset<32>(n) << std::endl;
+	std::cout << "Int before shifting = " << std::endl << std::bitset<32>(n) << std::endl;
 	this->raw_bits = n << this->frac_bits;
-	std::cout << "Int after = " << std::endl << std::bitset<32>(this->raw_bits) << std::endl;
-
+	std::cout << "Int after shifting= " << std::endl << std::bitset<32>(this->raw_bits) << std::endl;
 	return ;
 }
 
-Fixed::Fixed(float const n)
+Fixed::Fixed(float n)
 {
 	std::cout << "Float constructor called" << std::endl;
 	std::cout << "Float before = " << std::endl << std::bitset<32>(n) << std::endl;

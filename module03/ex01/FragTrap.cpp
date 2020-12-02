@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/20 23:14:41 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/10/26 10:17:44 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/10/28 10:02:03 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,25 +47,25 @@ FragTrap::FragTrap(FragTrap const & cpy)
 
 FragTrap::~FragTrap(void)
 {
-	std::cout << "Yessss, look into my eyes. You're getting sleepy. You're getting... zzzzzz... Zzzzzz..." << std::endl;
+	std::cout << "Argh arghargh death gurgle gurglegurgle urgh... death." << std::endl;
 }
 
 // operator overload --------------------------------------------------------
-FragTrap &		FragTrap::operator=(FragTrap const & rsh)
+FragTrap &		FragTrap::operator=(FragTrap const & rhs)
 {
-	name = rsh.name;
-	hitpoints = rsh.hitpoints;
-	max_hit_points = rsh.max_hit_points;
-	energy_points = rsh.energy_points;
-	max_energy_points = rsh.max_energy_points;
-	level = rsh.level;
-	melee_attack_damage = rsh.melee_attack_damage;
-	ranged_attack_damage = rsh.ranged_attack_damage;
-	armor_damage_reduction = rsh.armor_damage_reduction;
+	name = rhs.name;
+	hitpoints = rhs.hitpoints;
+	max_hit_points = rhs.max_hit_points;
+	energy_points = rhs.energy_points;
+	max_energy_points = rhs.max_energy_points;
+	level = rhs.level;
+	melee_attack_damage = rhs.melee_attack_damage;
+	ranged_attack_damage = rhs.ranged_attack_damage;
+	armor_damage_reduction = rhs.armor_damage_reduction;
 	return (*this);
 }
 
-// attack functions --------------------------------------------------------
+// attack member functions ---------------------------------------------------
 void			FragTrap::rangedAttack(std::string const & target)
 {
 	std::cout << "FR4G-TP " << this->name << " attacks " << target << " at range, causing " << this->ranged_attack_damage << " points of damage!" << std::endl;

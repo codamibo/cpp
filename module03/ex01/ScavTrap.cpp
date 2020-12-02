@@ -6,13 +6,12 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/20 23:14:35 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/10/26 10:20:30 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/10/28 10:10:35 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
-// const and dest classes--------------------------------------------------------
 ScavTrap::ScavTrap(void) : name("DefaultScav"),
 	hitpoints(100),
 	max_hit_points(100),
@@ -51,17 +50,17 @@ ScavTrap::~ScavTrap(void)
 }
 
 // operator overload --------------------------------------------------------
-ScavTrap &		ScavTrap::operator=(ScavTrap const & rsh)
+ScavTrap &		ScavTrap::operator=(ScavTrap const & rhs)
 {
-	name = rsh.name;
-	hitpoints = rsh.hitpoints;
-	max_hit_points = rsh.max_hit_points;
-	energy_points = rsh.energy_points;
-	max_energy_points = rsh.max_energy_points;
-	level = rsh.level;
-	melee_attack_damage = rsh.melee_attack_damage;
-	ranged_attack_damage = rsh.ranged_attack_damage;
-	armor_damage_reduction = rsh.armor_damage_reduction;
+	name = rhs.name;
+	hitpoints = rhs.hitpoints;
+	max_hit_points = rhs.max_hit_points;
+	energy_points = rhs.energy_points;
+	max_energy_points = rhs.max_energy_points;
+	level = rhs.level;
+	melee_attack_damage = rhs.melee_attack_damage;
+	ranged_attack_damage = rhs.ranged_attack_damage;
+	armor_damage_reduction = rhs.armor_damage_reduction;
 	return (*this);
 }
 
