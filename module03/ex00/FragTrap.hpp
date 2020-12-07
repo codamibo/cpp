@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/12 09:26:55 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/10/20 23:15:37 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/12/07 11:14:03 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,8 @@ class FragTrap{
 		void			speedAttack(std::string const & target);
 		void			deadAttack(std::string const & target);
 		void			cyberAttack(std::string const & target);
+		void			shotgunAttack(std::string const & target);
+		void			gasAttack(std::string const & target);
 		void			takeDamage(unsigned int amount);
 		void			beRepaired(unsigned int amount);
 		void			vaulthunter_dot_exe(std::string const & target);	

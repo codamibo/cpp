@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/20 23:14:32 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/10/28 10:11:51 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/12/07 12:20:30 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,9 +46,6 @@ class ScavTrap{
 		int				get_armor_damage_reduction(void) const;
 		void			rangedAttack(std::string const & target);
 		void			meleeAttack(std::string const & target);
-		void			speedAttack(std::string const & target);
-		void			deadAttack(std::string const & target);
-		void			cyberAttack(std::string const & target);
 		void			takeDamage(unsigned int amount);
 		void			beRepaired(unsigned int amount);
 		void			challengeNewcomer(std::string const & target) const;

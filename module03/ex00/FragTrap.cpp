@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/12 09:26:58 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/10/28 10:02:12 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/12/07 12:13:11 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,6 +91,15 @@ void			FragTrap::cyberAttack(std::string const & target)
 	std::cout << "FR4G-TP " << this->name << " performs a cyber attack on " << target << " causing 25 points of damage!" << std::endl;
 }
 
+void			FragTrap::shotgunAttack(std::string const & target)
+{
+	std::cout << "FR4G-TP " << this->name << " performs a shotgun attack on " << target << " causing 99 points of damage!" << std::endl;
+}
+
+void			FragTrap::gasAttack(std::string const & target)
+{
+	std::cout << "FR4G-TP " << this->name << " performs a gas attack on " << target << " causing 10 points of damage!" << std::endl;
+}
 
 // other member functions ---------------------------------------------------
 void			FragTrap::takeDamage(unsigned int amount)
@@ -100,9 +109,9 @@ void			FragTrap::takeDamage(unsigned int amount)
 	red = amount - this->armor_damage_reduction;
 	if (this->hitpoints - red < 0)
 		this->hitpoints = 0;
-	else if (red > 0) // if amount is smaller than damage_reduction -> no damage
+	else if (red > 0)
 		this->hitpoints -= red;
-	else
+	else  // if amount is smaller than damage_reduction -> no damage
 	{
 		std::cout << "FR4G-TP " << this->name << " is protected by its armor" << std::endl;
 		return ;
@@ -131,8 +140,8 @@ void			FragTrap::vaulthunter_dot_exe(std::string const & target)
 		this->energy_points -= 25;
 		void (FragTrap::* const attacks[5])(std::string const & target) =
 		{
-			&FragTrap::rangedAttack,
-			&FragTrap::meleeAttack,
+			&FragTrap::gasAttack,
+			&FragTrap::shotgunAttack,
 			&FragTrap::speedAttack,
 			&FragTrap::deadAttack,
 			&FragTrap::cyberAttack

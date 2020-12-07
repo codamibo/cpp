@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/20 23:14:35 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/10/28 10:10:35 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/12/07 12:35:08 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,21 +75,6 @@ void			ScavTrap::meleeAttack(std::string const & target)
 	std::cout << "SC4V-TP " << this->name << " attacks " << target << " at short range, causing " << this->melee_attack_damage << " points of damage!" << std::endl;
 }
 
-void			ScavTrap::speedAttack(std::string const & target)
-{
-	std::cout << "SC4V-TP " << this->name << " attacks " << target << " with speed, causing 10 points of damage!" << std::endl;
-}
-
-void			ScavTrap::deadAttack(std::string const & target)
-{
-	std::cout << "SC4V-TP " << this->name << " attacks " << target << " deadly, causing 100 points of damage!" << std::endl;
-}
-
-void			ScavTrap::cyberAttack(std::string const & target)
-{
-	std::cout << "SC4V-TP " << this->name << " performs a cyber attack on " << target << " causing 25 points of damage!" << std::endl;
-}
-
 // other member functions ---------------------------------------------------
 void			ScavTrap::takeDamage(unsigned int amount)
 {
@@ -98,9 +83,9 @@ void			ScavTrap::takeDamage(unsigned int amount)
 	red = amount - this->armor_damage_reduction;
 	if (this->hitpoints - red < 0)
 		this->hitpoints = 0;
-	else if (red > 0) // if amount is smaller than damage_reduction -> no damage
+	else if (red > 0) 
 		this->hitpoints -= red;
-	else
+	else // if amount is smaller than damage_reduction -> no damage
 	{
 		std::cout << "SC4V-TP " << this->name << " is protected by its armor" << std::endl;
 		return ;

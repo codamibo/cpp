@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/20 23:14:41 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/12/01 17:00:47 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/12/07 11:26:36 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,20 +73,30 @@ void			FragTrap::cyberAttack(std::string const & target)
 	std::cout << "CL4P-TP " << this->get_name() << " performs a cyber attack on " << target << " causing 25 points of damage!" << std::endl;
 }
 
+void			FragTrap::shotgunAttack(std::string const & target)
+{
+	std::cout << "CL4P-TP " << this->get_name() << " performs a shotgun attack on " << target << " causing 99 points of damage!" << std::endl;
+}
+
+void			FragTrap::gasAttack(std::string const & target)
+{
+	std::cout << "CL4P-TP " << this->get_name() << " performs a gas attack on " << target << " causing 10 points of damage!" << std::endl;
+}
+
 void			FragTrap::vaulthunter_dot_exe(std::string const & target)
 {
 	float	index;
 	float	fraction;
 
 	if (this->get_energy_points() < 25)
-		std::cout << "FR4G-TP " << this->get_name() << " out of energy" << std::endl;
+		std::cout << "CL4P-TP " << this->get_name() << " out of energy" << std::endl;
 	else
 	{
 		set_energy_points(this->get_energy_points() - 25);
 		void (FragTrap::* const attacks[5])(std::string const & target) =
 		{
-			&FragTrap::rangedAttack,
-			&FragTrap::meleeAttack,
+			&FragTrap::gasAttack,
+			&FragTrap::shotgunAttack,
 			&FragTrap::speedAttack,
 			&FragTrap::deadAttack,
 			&FragTrap::cyberAttack

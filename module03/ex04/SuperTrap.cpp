@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/02 16:27:38 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/12/03 17:18:47 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/12/07 12:53:20 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ SuperTrap &		SuperTrap::operator=(SuperTrap const & rhs)
 	return (*this);
 }
 
-// class specific member function--------------------------------------------
+// other member function-----------------------------------------------------
 void			SuperTrap::rangedAttack(std::string const & target)
 {
 	FragTrap::rangedAttack(target);
@@ -65,6 +65,5 @@ void			SuperTrap::rangedAttack(std::string const & target)
 
 void			SuperTrap::meleeAttack(std::string const & target)
 {
-	NinjaTrap::rangedAttack(target);
-	
+	NinjaTrap::meleeAttack(target);
 }

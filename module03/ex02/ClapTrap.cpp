@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/28 09:06:37 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/12/01 16:57:56 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/12/07 12:34:54 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,9 +85,9 @@ void			ClapTrap::takeDamage(unsigned int amount)
 	red = amount - this->armor_damage_reduction;
 	if (this->hitpoints - red < 0)
 		this->hitpoints = 0;
-	else if (red > 0) // if amount is smaller than damage_reduction -> no damage
+	else if (red > 0)
 		this->hitpoints -= red;
-	else
+	else // if amount is smaller than damage_reduction -> no damage
 	{
 		std::cout << "CL4P-TP " << this->name << " is protected by its armor" << std::endl;
 		return ;

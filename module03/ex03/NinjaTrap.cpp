@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/04 09:20:34 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/12/02 16:10:30 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/12/07 11:48:43 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,5 +76,5 @@ void 	NinjaTrap::ninjaShoebox(NinjaTrap &ninja)
 void	NinjaTrap::ninjaShoebox(ClapTrap &clap)
 {
 	clap.takeDamage(100);
-	std::cout << "N1NJ4_TP: Heh heh heh, squishy bits!" << std::endl;
+	std::cout << "N1NJ4_TP " << this->get_name() << ": Heh heh heh, squishy bits!" << std::endl;
 }

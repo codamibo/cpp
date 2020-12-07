@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/20 23:14:39 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/12/01 17:00:24 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/12/07 11:19:54 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ class FragTrap : public ClapTrap{
 		void			speedAttack(std::string const & target);
 		void			deadAttack(std::string const & target);
 		void			cyberAttack(std::string const & target);
+		void			shotgunAttack(std::string const & target);
+		void			gasAttack(std::string const & target);
 		void			vaulthunter_dot_exe(std::string const & target);
 };
 
