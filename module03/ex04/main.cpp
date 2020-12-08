@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/20 23:14:37 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/12/07 12:41:10 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/12/08 08:07:52 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,20 @@ int			main(void)
 	ninja.meleeAttack("target");
 	frag.meleeAttack("target");
 	clap2.meleeAttack("target");
+	std::cout << "\033[1;31mSome random attacks from FragTrap\033[0m" << std::endl;
+	frag.vaulthunter_dot_exe("T");
+	frag.vaulthunter_dot_exe("A");
+	frag.vaulthunter_dot_exe("R");
+	frag.vaulthunter_dot_exe("G");
+	frag.vaulthunter_dot_exe("E");
+	frag.vaulthunter_dot_exe("T");
+	std::cout << "\033[1;31mSome random challenges from ScavTrap\033[0m" << std::endl;
+	scav.challengeNewcomer("T");
+	scav.challengeNewcomer("A");
+	scav.challengeNewcomer("R");
+	scav.challengeNewcomer("G");
+	scav.challengeNewcomer("E");
+	scav.challengeNewcomer("T");
 	std::cout << "\033[1;31mSome ninjaShoebox attacks\033[0m" << std::endl;
 	ninja.ninjaShoebox(scav);
 	ninja.ninjaShoebox(frag);

@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/20 23:14:35 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/11/04 09:15:52 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/12/08 08:05:03 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void			ScavTrap::challengeNewcomer(std::string const & target) const
 	float	index;
 	float	fraction;
 
-	std::string challenges[5]{
+	std::string challenges[5] = {
 		"You versus me! Me versus you! Either way!",
 		"I will prove to you my robotic superiority!",
 		"Dance battle! Or, you know... regular battle.",
