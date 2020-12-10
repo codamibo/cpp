@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/10 11:23:14 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/12/10 11:32:09 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/12/10 15:31:51 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,7 @@ class Enemy{
 		void				setHP(int HP);
 		virtual void		takeDamage(const int damage);
 };
+
+std::ostream &		operator<<(std::ostream & output_stream, Enemy const &Enemy);
 
 #endif

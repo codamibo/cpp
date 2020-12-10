@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/10 12:31:02 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/12/10 12:37:38 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/12/10 15:39:47 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,6 @@ RadScorpion &		RadScorpion::operator=(RadScorpion const & rhs)
 
 std::ostream &		operator<<(std::ostream & output_stream, RadScorpion const &RadScorpion)
 {
-	output_stream << RadScorpion.getType() << "	| " << RadScorpion.getHP() << std::endl;
+	output_stream << RadScorpion.getType() << "	| HP: " << RadScorpion.getHP() << std::endl;
 	return (output_stream);
 }

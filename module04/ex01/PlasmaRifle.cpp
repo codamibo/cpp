@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/10 11:01:48 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/12/10 11:39:22 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/12/10 15:40:24 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,6 @@ void				PlasmaRifle::attack() const
 
 std::ostream &		operator<<(std::ostream & output_stream, PlasmaRifle const &PlasmaRifle)
 {
-	output_stream << PlasmaRifle.getName() << "	| " << PlasmaRifle.getDamage() << " | " << PlasmaRifle.getAPCost() << std::endl;
+	output_stream << PlasmaRifle.getName() << "	| Damage: " << PlasmaRifle.getDamage() << " | APCost: " << PlasmaRifle.getAPCost() << std::endl;
 	return (output_stream);
 }

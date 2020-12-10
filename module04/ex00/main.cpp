@@ -6,13 +6,14 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/08 16:28:29 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/12/10 10:59:49 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/12/10 16:11:12 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Sorcerer.hpp"
 #include "Victim.hpp"
 #include "Peon.hpp"
+#include "Peon2.hpp"
 
 int		main(void)
 {
@@ -33,17 +34,17 @@ int		main(void)
 	Victim vic3(jim); //cpy const
 	Victim vic4(joe); //cpy const derived class
 	Peon peon = joe; //derived class assignment operator
-	Peon peon2(joe); //derived class cpy const
-	std::cout << "\033[1;31m4 sheeps\033[0m" << std::endl;
+	Peon peonn(joe); //derived class cpy const
+	std::cout << "\033[1;31mPolymorph to 4 sheeps\033[0m" << std::endl;
 	vic.getPolymorphed();
 	vic2.getPolymorphed();
 	vic3.getPolymorphed();
 	vic4.getPolymorphed();
-	std::cout << "\033[1;31m2 ponies\033[0m" << std::endl;
+	std::cout << "\033[1;31mPolymorph to 2 ponies\033[0m" << std::endl;
 	peon.getPolymorphed();
-	peon2.getPolymorphed();
-	std::cout << "\033[1;31mTesting polymorphism\033[0m" << std::endl;
-	Victim *poly = new Peon("Joe2");
+	peonn.getPolymorphed();
+	std::cout << "\033[1;31mTesting polymorphism with extra victim\033[0m" << std::endl;
+	Victim *poly = new Peon2("Joe2");
 	robert.polymorph(*poly);
 	delete poly;
 	

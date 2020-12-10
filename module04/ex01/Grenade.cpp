@@ -1,50 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   PowerFist.cpp                                      :+:    :+:            */
+/*   Grenade.cpp                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/12/10 11:18:33 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/12/10 15:39:32 by iboeters      ########   odam.nl         */
+/*   Created: 2020/12/10 16:14:09 by iboeters      #+#    #+#                 */
+/*   Updated: 2020/12/10 16:33:42 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PowerFist.hpp"
+#include "Grenade.hpp"
 
-PowerFist::PowerFist()
+Grenade::Grenade()
 {
-	setName("Power Fist");
-	setDamage(50);
-	setAPCost(8);
+	setName("Grenade");
+	setDamage(80);
+	setAPCost(10);
 	return ;
 }
 
-PowerFist::PowerFist(PowerFist const & cpy) : AWeapon(cpy)
-{
-	return ;
-}
-
-PowerFist::~PowerFist(void)
+Grenade::Grenade(Grenade const & cpy) : AWeapon(cpy)
 {
 	return ;
 }
 
-PowerFist &		PowerFist::operator=(PowerFist const & rhs)
+Grenade::~Grenade(void)
+{
+	return ;
+}
+
+Grenade &		Grenade::operator=(Grenade const & rhs)
 {
 	if (&rhs != this)
 		AWeapon::operator=(rhs);
 	return (*this);
 }
 
-void				PowerFist::attack() const
+void				Grenade::attack() const
 {
-	std::cout << "* pschhh... SBAM! *" << std::endl;
+	std::cout << "* kabooooom *" << std::endl;
 	return ;
 }
 
-std::ostream &		operator<<(std::ostream & output_stream, PowerFist const &PowerFist)
+std::ostream &		operator<<(std::ostream & output_stream, Grenade const &Grenade)
 {
-	output_stream << PowerFist.getName() << "	| Damage: " << PowerFist.getDamage() << " | APCost: " << PowerFist.getAPCost() << std::endl;
+	output_stream << Grenade.getName() << "		| Damage: " << Grenade.getDamage() << " | APCost: " << Grenade.getAPCost() << std::endl;
 	return (output_stream);
 }

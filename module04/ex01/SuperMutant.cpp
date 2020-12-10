@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/10 12:20:35 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/12/10 12:29:27 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/12/10 15:40:03 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,6 @@ void				SuperMutant::takeDamage(const int damage)
 
 std::ostream &		operator<<(std::ostream & output_stream, SuperMutant const &SuperMutant)
 {
-	output_stream << SuperMutant.getType() << "	| " << SuperMutant.getHP() << std::endl;
+	output_stream << SuperMutant.getType() << "	| HP: " << SuperMutant.getHP() << std::endl;
 	return (output_stream);
 }

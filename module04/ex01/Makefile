@@ -6,7 +6,7 @@
 #    By: iboeters <iboeters@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/12/10 10:23:23 by iboeters      #+#    #+#                  #
-#    Updated: 2020/12/10 13:07:24 by iboeters      ########   odam.nl          #
+#    Updated: 2020/12/10 16:16:15 by iboeters      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,12 +18,13 @@ SRCS =	main.cpp\
 		Enemy.cpp\
 		SuperMutant.cpp\
 		RadScorpion.cpp\
-		Character.cpp
+		Character.cpp\
+		Grenade.cpp
 OBJS = ${SRCS:%.cpp=%.o}
 FLAGS= -Wall -Werror -Wextra
 COMPILE = clang++
 
-WHITE = \033[38;2;255;204;213m
+PINK = \033[38;2;255;204;213m
 GREY = \033[38;2;100;100;100m
 BG_GREY = \033[48;2;38;38;38m
 RESET = \033[0m
@@ -37,7 +38,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	@clang++ $(FLAGS) $(OBJS) -o $(NAME)
 	@echo "$(GREY)---------------------------------------------"
-	@echo "$(WHITE)Run executable: \"./$(NAME)\""
+	@echo "$(PINK)Run executable: \"./$(NAME)\""
 
 clean:
 	@echo "$(BG_GREY)$(GREY)Deleting $(OBJS)$(RESET)"

@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/10 11:23:09 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/12/10 12:42:10 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/12/10 15:39:10 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,11 @@ void				Enemy::takeDamage(const int damage)
 	return ;
 }
 
+std::ostream &		operator<<(std::ostream & output_stream, Enemy const &Enemy)
+{
+	output_stream << Enemy.getType() << "	| HP: " << Enemy.getHP() << std::endl;
+	return (output_stream);
+}
 
 //getters and setters------------------------------------------------
 

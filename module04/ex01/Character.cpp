@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/10 12:36:13 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/12/10 13:17:22 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/12/10 16:37:22 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,12 +56,16 @@ void				Character::equip(AWeapon* weapon)
 
 void				Character::attack(Enemy* en)
 {
-	if (_weapon != NULL && _AP >= _weapon->getAPCost())
+	if (_AP < _weapon->getAPCost())
+		std::cout << "Not enough AP for attack" << std::endl;
+	else if (en->getHP() <= 0)
+		std::cout << "Attempting attack on dead enemy" << std::endl;
+	else if (_weapon != NULL)
 	{
 		std::cout << _name << " attacks " <<  en->getType() << " with a " << _weapon->getName() << std::endl;
 		_AP -= _weapon->getAPCost();
 		_weapon->attack();
-		en->setHP(en->getHP() - _weapon->getDamage());
+		en->takeDamage(_weapon->getDamage());
 		if (en->getHP() <= 0)
 			delete en;
 	}
