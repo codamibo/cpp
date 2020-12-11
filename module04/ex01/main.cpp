@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/10 10:17:57 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/12/10 16:35:08 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/12/10 17:51:00 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,9 @@ int		main(void)
 
 	std::cout << "\033[1;31m\nOwn tests\033[0m" << std::endl;
 	me->attack(b);
+	Character* me2 = new Character("me2");
+	me2 = me;
+	std::cout << (*me2);
 	std::cout << "\033[1;31mDisplay weapon funtionalities\033[0m" << std::endl;
 	// AWeapon a; //not possible: unimplemented pure function attack
 	PlasmaRifle p;
@@ -55,28 +58,29 @@ int		main(void)
 	(*RS).takeDamage(10);
 	std::cout << (*SM) << (*RS);
 	std::cout << "\033[1;31mLet's fight\033[0m" << std::endl;
-	me->equip(&g);
-	std::cout << *me << *SM;
-	me->attack(SM);
-	me->equip(pf);
-	std::cout << *me << *SM;
-	me->attack(SM);
-	std::cout << *me << *SM;
-	me->attack(SM); //from here not enough AP left
-	me->attack(SM);
-	me->attack(SM);
+	me2->equip(&g);
+	std::cout << *me2 << *SM;
+	me2->attack(SM);
+	me2->equip(pf);
+	std::cout << *me2 << *SM;
+	me2->attack(SM);
+	std::cout << *me2 << *SM;
+	me2->attack(SM); //from here not enough AP left
+	me2->attack(SM);
+	me2->attack(SM);
 	std::cout << "\033[1;31mRecover\033[0m" << std::endl;
-	std::cout << *me;
-	me->recoverAP();
-	std::cout << *me;
-	me->recoverAP();
-	std::cout << *me;
-	me->recoverAP();
-	std::cout << *me;
-	me->recoverAP();
-	std::cout << *me;
+	std::cout << *me2;
+	me2->recoverAP();
+	std::cout << *me2;
+	me2->recoverAP();
+	std::cout << *me2;
+	me2->recoverAP();
+	std::cout << *me2;
+	me2->recoverAP();
+	std::cout << *me2;
 	std::cout << "\033[1;31m\nDestructing\033[0m" << std::endl;
 	delete me;
+	delete me2;
 	delete pr;
 	delete pf;
 	// delete b; //is deleted by me

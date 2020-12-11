@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/10 19:03:00 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/12/10 19:05:09 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/12/11 16:42:09 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,8 @@ AssaultTerminator::AssaultTerminator(void)
 	return ;
 }
 
-AssaultTerminator::AssaultTerminator(AssaultTerminator const & cpy)
+AssaultTerminator::AssaultTerminator(AssaultTerminator const &)
 {
-	*this = cpy;
 	return ;
 }
 
@@ -30,16 +29,14 @@ AssaultTerminator::~AssaultTerminator(void)
 	return ;
 }
 
-AssaultTerminator &	AssaultTerminator::operator=(AssaultTerminator const & rhs)
+AssaultTerminator &	AssaultTerminator::operator=(AssaultTerminator const &)
 {
-	(void)rhs;
 	return (*this);
 }
 
 ISpaceMarine*		AssaultTerminator::clone(void) const
 {
-	ISpaceMarine *clone = new AssaultTerminator;
-	return (clone);
+	return (new AssaultTerminator(*this));
 }
 
 void				AssaultTerminator::battleCry(void) const

@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/10 18:36:22 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/12/10 18:58:27 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/12/11 16:42:38 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,8 @@ TacticalMarine::TacticalMarine(void)
 	return ;
 }
 
-TacticalMarine::TacticalMarine(TacticalMarine const & cpy)
+TacticalMarine::TacticalMarine(TacticalMarine const &)
 {
-	*this = cpy;
 	return ;
 }
 
@@ -30,16 +29,14 @@ TacticalMarine::~TacticalMarine(void)
 	return ;
 }
 
-TacticalMarine &	TacticalMarine::operator=(TacticalMarine const & rhs)
+TacticalMarine &	TacticalMarine::operator=(TacticalMarine const &)
 {
-	(void)rhs;
 	return (*this);
 }
 
 ISpaceMarine*		TacticalMarine::clone(void) const
 {
-	ISpaceMarine *clone = new TacticalMarine;
-	return (clone);
+	return (new TacticalMarine(*this));
 }
 
 void				TacticalMarine::battleCry(void) const
