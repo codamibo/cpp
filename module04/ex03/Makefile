@@ -6,11 +6,11 @@
 #    By: iboeters <iboeters@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/12/10 10:23:23 by iboeters      #+#    #+#                  #
-#    Updated: 2020/12/13 12:22:08 by iboeters      ########   odam.nl          #
+#    Updated: 2020/12/13 18:24:01 by iboeters      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = marine
+NAME = materia
 SRCS =	main.cpp\
 		AMateria.cpp\
 		Ice.cpp\

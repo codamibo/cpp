@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/10 10:17:57 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/12/10 17:51:00 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/12/13 18:25:19 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,10 @@ int		main(void)
 
 	std::cout << "\033[1;31m\nOwn tests\033[0m" << std::endl;
 	me->attack(b);
-	Character* me2 = new Character("me2");
-	me2 = me;
+	Character* me2 = new Character(*me);
+	std::cout << (*me2);
+	me->equip(pf);
+	*me2 = *me; //assignment operator
 	std::cout << (*me2);
 	std::cout << "\033[1;31mDisplay weapon funtionalities\033[0m" << std::endl;
 	// AWeapon a; //not possible: unimplemented pure function attack
@@ -86,5 +88,9 @@ int		main(void)
 	// delete b; //is deleted by me
 	delete SM;
 	delete RS;
+	// while (1) // check for leaks
+	// {
+		
+	// }
 	return (0);
 }

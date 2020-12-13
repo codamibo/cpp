@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/10 12:36:13 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/12/12 21:35:22 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/12/13 18:09:11 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ Character &			Character::operator=(Character const & rhs)
 	{
 		_name = rhs._name;
 		_AP = rhs._AP;
+		_weapon = rhs._weapon;
 	}
 	return (*this);
 }

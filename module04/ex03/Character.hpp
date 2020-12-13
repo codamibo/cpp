@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/12 20:42:09 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/12/12 21:21:48 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/12/13 16:43:46 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ class Character : public ICharacter
 		Character &				operator=(Character const & rhs);
 		std::string const &		getName(void) const;
 		int						getCount(void) const;
+		std::vector<AMateria*>	getMaterias(void) const;
 		void					equip(AMateria* m);
 		void 					unequip(int idx);
 		void					use(int idx, ICharacter& target);

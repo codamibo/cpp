@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/12 20:42:11 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/12/13 11:45:19 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/12/13 17:55:56 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ Character &				Character::operator=(Character const & rhs)
 		_numInventory = 0;
 		for (int i = 0; i < rhs.getCount(); i++)
 		{
-			(*this).equip(rhs._materias[i]->clone());
+			(*this).equip(rhs._materias[i]);
 		}
 	}
 	return (*this);
@@ -60,6 +60,11 @@ int						Character::getCount(void) const
 	return (_numInventory);
 }
 
+std::vector<AMateria*>	Character::getMaterias(void) const
+{
+	return (_materias);
+}
+
 void					Character::equip(AMateria* m)
 {
 	if (m == NULL)
@@ -69,13 +74,19 @@ void					Character::equip(AMateria* m)
 		std::cout << "Character already has 4 equipped materias" << std::endl;
 		return ;
 	}
-	_materias.push_back(m);
+	_materias.push_back(m->clone());
 	_numInventory++;
 	return ;
 }
 
 void 					Character::unequip(int idx)
 {
+	if (idx >= _numInventory)
+	{
+		std::cout << "Character does not have inventory to unequip on index" << idx << std::endl;
+		return ;
+	}
+	delete _materias[idx];
 	_materias.erase(_materias.begin() + idx);
 	_numInventory--;
 }

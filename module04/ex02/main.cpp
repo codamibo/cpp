@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/10 17:51:55 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/12/11 16:48:21 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/12/13 18:21:36 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,5 +68,9 @@ int		main(void)
 	std::cout << "\033[1;31m\nDestructing\033[0m" << std::endl;
 	delete cpy;
 	delete assign;
+	// while (1) //check for leaks
+	// {
+		
+	// }
 	return (0);
 }
