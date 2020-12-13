@@ -1,34 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   AssaultTerminator.hpp                              :+:    :+:            */
+/*   Cure.hpp                                           :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/12/10 19:02:57 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/12/11 17:04:27 by iboeters      ########   odam.nl         */
+/*   Created: 2020/12/12 14:55:28 by iboeters      #+#    #+#                 */
+/*   Updated: 2020/12/12 20:30:38 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ASSAULTTERMINATOR_HPP
-# define ASSAULTTERMINATOR_HPP
+#ifndef CURE_HPP
+# define CURE_HPP
 
 #include <string>
 #include <iostream>
-#include <vector>
-#include "ISpaceMarine.hpp"
+#include "AMateria.hpp"
+#include "ICharacter.hpp"
 
-
-class AssaultTerminator : public ISpaceMarine{
+class Cure : public AMateria
+{
 	public:
-		AssaultTerminator(void);
-		AssaultTerminator(AssaultTerminator const &);
-		~AssaultTerminator(void);
-		AssaultTerminator &	operator=(AssaultTerminator const &);
-		ISpaceMarine*		clone(void) const;
-		void				battleCry(void) const;
-		void				rangedAttack(void) const;
-		void				meleeAttack(void) const;
+		Cure(void);
+		~Cure(void);
+		Cure(Cure const & cpy);
+		Cure &		operator=(Cure const & rhs);
+		Cure*		clone(void) const;
+		void 		use(ICharacter& target);
 };
 
 #endif

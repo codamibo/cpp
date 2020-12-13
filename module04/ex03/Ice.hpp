@@ -1,34 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   AssaultTerminator.hpp                              :+:    :+:            */
+/*   Ice.hpp                                            :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/12/10 19:02:57 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/12/11 17:04:27 by iboeters      ########   odam.nl         */
+/*   Created: 2020/12/12 14:55:35 by iboeters      #+#    #+#                 */
+/*   Updated: 2020/12/12 20:31:18 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ASSAULTTERMINATOR_HPP
-# define ASSAULTTERMINATOR_HPP
+#ifndef ICE_HPP
+# define ICE_HPP
 
 #include <string>
 #include <iostream>
-#include <vector>
-#include "ISpaceMarine.hpp"
+#include "AMateria.hpp"
+#include "ICharacter.hpp"
 
-
-class AssaultTerminator : public ISpaceMarine{
+class Ice : public AMateria
+{
 	public:
-		AssaultTerminator(void);
-		AssaultTerminator(AssaultTerminator const &);
-		~AssaultTerminator(void);
-		AssaultTerminator &	operator=(AssaultTerminator const &);
-		ISpaceMarine*		clone(void) const;
-		void				battleCry(void) const;
-		void				rangedAttack(void) const;
-		void				meleeAttack(void) const;
+		Ice(void);
+		~Ice(void);
+		Ice(Ice const & cpy);
+		Ice &		operator=(Ice const & rhs);
+		Ice*		clone(void) const;
+		void 		use(ICharacter& target);
 };
 
 #endif

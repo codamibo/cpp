@@ -6,22 +6,19 @@
 #    By: iboeters <iboeters@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/12/10 10:23:23 by iboeters      #+#    #+#                  #
-#    Updated: 2020/12/12 22:21:04 by iboeters      ########   odam.nl          #
+#    Updated: 2020/12/13 12:22:08 by iboeters      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = wasteland
+NAME = marine
 SRCS =	main.cpp\
-		AWeapon.cpp\
-		PlasmaRifle.cpp \
-		PowerFist.cpp\
-		Enemy.cpp\
-		SuperMutant.cpp\
-		RadScorpion.cpp\
+		AMateria.cpp\
+		Ice.cpp\
+		Cure.cpp\
 		Character.cpp\
-		Grenade.cpp
+		MateriaSource.cpp
 OBJS = ${SRCS:%.cpp=%.o}
-FLAGS= -Wall -Werror -Wextra
+FLAGS=
 COMPILE = clang++
 
 PINK = \033[38;2;255;204;213m

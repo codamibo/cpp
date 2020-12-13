@@ -1,34 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   AssaultTerminator.hpp                              :+:    :+:            */
+/*   ICharacter.hpp                                     :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/12/10 19:02:57 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/12/11 17:04:27 by iboeters      ########   odam.nl         */
+/*   Created: 2020/12/12 20:13:09 by iboeters      #+#    #+#                 */
+/*   Updated: 2020/12/13 11:34:36 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ASSAULTTERMINATOR_HPP
-# define ASSAULTTERMINATOR_HPP
+#ifndef ICHARACTER_HPP
+# define ICHARACTER_HPP
 
 #include <string>
 #include <iostream>
-#include <vector>
-#include "ISpaceMarine.hpp"
 
+class AMateria;
 
-class AssaultTerminator : public ISpaceMarine{
+class ICharacter
+{
 	public:
-		AssaultTerminator(void);
-		AssaultTerminator(AssaultTerminator const &);
-		~AssaultTerminator(void);
-		AssaultTerminator &	operator=(AssaultTerminator const &);
-		ISpaceMarine*		clone(void) const;
-		void				battleCry(void) const;
-		void				rangedAttack(void) const;
-		void				meleeAttack(void) const;
+		virtual ~ICharacter(void) {}
+		virtual std::string const &		getName(void) const = 0;
+		virtual void					equip(AMateria* m) = 0;
+		virtual void					unequip(int idx) = 0;
+		virtual void					use(int idx, ICharacter& target) = 0;
 };
 
 #endif

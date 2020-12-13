@@ -1,34 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   AssaultTerminator.hpp                              :+:    :+:            */
+/*   IMateriaSource.hpp                                 :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/12/10 19:02:57 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/12/11 17:04:27 by iboeters      ########   odam.nl         */
+/*   Created: 2020/12/13 11:57:45 by iboeters      #+#    #+#                 */
+/*   Updated: 2020/12/13 12:02:32 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ASSAULTTERMINATOR_HPP
-# define ASSAULTTERMINATOR_HPP
+#ifndef IMATERIASOURCE_HPP
+# define IMATERIASOURCE_HPP
 
 #include <string>
 #include <iostream>
-#include <vector>
-#include "ISpaceMarine.hpp"
 
+class AMateria;
 
-class AssaultTerminator : public ISpaceMarine{
+class IMateriaSource
+{
 	public:
-		AssaultTerminator(void);
-		AssaultTerminator(AssaultTerminator const &);
-		~AssaultTerminator(void);
-		AssaultTerminator &	operator=(AssaultTerminator const &);
-		ISpaceMarine*		clone(void) const;
-		void				battleCry(void) const;
-		void				rangedAttack(void) const;
-		void				meleeAttack(void) const;
+		virtual ~IMateriaSource() {}
+		virtual void learnMateria(AMateria*) = 0;
+		virtual AMateria* createMateria(std::string const & type) = 0;
 };
 
 #endif

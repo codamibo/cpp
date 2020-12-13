@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/10 17:59:19 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/12/11 13:17:36 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/12/12 21:01:07 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,10 @@ Squad::Squad(void) : _numUnits(0), _theSquad(0)
 
 Squad::Squad(Squad const & cpy)
 {
-	for (int i = 0; i < _numUnits; i++)
-		delete _theSquad[i];
-	_theSquad.clear();
-	_numUnits = 0;
-	for (int i = 0; i < cpy.getCount(); i++)
-		(*this).push(cpy.getUnit(i)->clone());
+	if (&cpy != this)
+	{
+		*this = cpy;
+	}
 	return ;
 }
 

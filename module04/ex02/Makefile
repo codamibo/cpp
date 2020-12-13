@@ -6,7 +6,7 @@
 #    By: iboeters <iboeters@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/12/10 10:23:23 by iboeters      #+#    #+#                  #
-#    Updated: 2020/12/10 19:05:31 by iboeters      ########   odam.nl          #
+#    Updated: 2020/12/12 22:20:51 by iboeters      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	@clang++ $(FLAGS) $(OBJS) -o $(NAME)
 	@echo "$(GREY)---------------------------------------------"
-	@echo "$(PINK)Run executable: \"./$(NAME)\""
+	@echo "$(PINK)Run executable: \"./$(NAME)\"$(RESET)"
 
 clean:
 	@echo "$(BG_GREY)$(GREY)Deleting $(OBJS)$(RESET)"
