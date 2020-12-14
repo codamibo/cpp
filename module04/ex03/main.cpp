@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/11 16:50:45 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/12/13 18:24:31 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/12/13 18:41:34 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ int		main(void)
 	ch->use(2, *jan);
 	ch->use(3, *jan);
 	std::cout << ch->getMaterias()[0]->getXP() << std::endl; //to show that increment XP works
-	std::cout << ch->getMaterias()[0]->getXP() << std::endl; //to show that increment XP works
+	std::cout << ch->getMaterias()[2]->getXP() << std::endl; //to show that increment XP works
 
 	std::cout << "\033[1;31m\nDeep copy of characters\033[0m" << std::endl;
 	Character* henk = new Character("henk");

@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/13 12:01:30 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/12/13 12:21:45 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/12/14 14:23:47 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class MateriaSource : public IMateriaSource
 		
 	public:
 		MateriaSource(void);
-		~MateriaSource(void);
+		virtual ~MateriaSource(void);
 		MateriaSource(MateriaSource const & cpy);
 		MateriaSource &			operator=(MateriaSource const & rhs);
 		void					learnMateria(AMateria* m);

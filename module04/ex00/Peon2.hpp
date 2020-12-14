@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/10 16:07:32 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/12/10 16:08:18 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/12/14 14:07:34 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,14 @@
 #include <iostream>
 #include "Victim.hpp"
 
-class Peon2 : virtual public Victim{
+class Peon2 : public Victim{
 	private:
-		Peon2(void); // or Peon2(void) = delete; as public member
+		Peon2(void);
 
 	public:
 		Peon2(std::string name);
 		Peon2(Peon2 const & cpy);
-		~Peon2(void);
+		virtual ~Peon2(void);
 		Peon2 &		operator=(Peon2 const & rhs);
 
 		void		getPolymorphed(void) const;

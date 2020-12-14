@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/12 14:55:35 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/12/12 20:31:18 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/12/14 14:23:32 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Ice : public AMateria
 {
 	public:
 		Ice(void);
-		~Ice(void);
+		virtual ~Ice(void);
 		Ice(Ice const & cpy);
 		Ice &		operator=(Ice const & rhs);
 		Ice*		clone(void) const;

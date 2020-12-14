@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/10 17:59:21 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/12/11 11:25:35 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/12/14 14:22:22 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class Squad : public ISquad{
 	public:
 		Squad(void);
 		Squad(Squad const & cpy);
-		~Squad(void);
+		virtual ~Squad(void);
 		Squad &							operator=(Squad const & rhs);
 		int								getCount() const;
 		ISpaceMarine*					getUnit(int) const;

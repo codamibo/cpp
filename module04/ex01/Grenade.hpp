@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/10 16:14:06 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/12/10 16:15:04 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/12/14 14:07:51 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class Grenade : public AWeapon{
 	public:
 		Grenade(void);
 		Grenade(Grenade const & cpy);
-		~Grenade(void);
+		virtual ~Grenade(void);
 		Grenade &		operator=(Grenade const & rhs);
 
 		void			attack() const;

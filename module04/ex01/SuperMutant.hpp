@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/10 12:20:32 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/12/10 12:29:02 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/12/14 14:09:30 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class SuperMutant : public Enemy{
 	public:
 		SuperMutant(void);
 		SuperMutant(SuperMutant const & cpy);
-		~SuperMutant(void);
+		virtual ~SuperMutant(void);
 		SuperMutant &		operator=(SuperMutant const & rhs);
 
 		void				takeDamage(const int damage);

@@ -6,7 +6,7 @@
 #    By: iboeters <iboeters@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/12/10 10:23:23 by iboeters      #+#    #+#                  #
-#    Updated: 2020/12/12 22:21:04 by iboeters      ########   odam.nl          #
+#    Updated: 2020/12/14 14:13:48 by iboeters      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,8 @@ SRCS =	main.cpp\
 		SuperMutant.cpp\
 		RadScorpion.cpp\
 		Character.cpp\
-		Grenade.cpp
+		Grenade.cpp\
+		Enemy2.cpp
 OBJS = ${SRCS:%.cpp=%.o}
 FLAGS= -Wall -Werror -Wextra
 COMPILE = clang++

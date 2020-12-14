@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/10 10:17:57 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/12/13 18:25:19 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/12/14 14:16:22 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 #include "RadScorpion.hpp"
 #include "Character.hpp"
 #include "Grenade.hpp"
+#include "Enemy2.hpp"
 
 int		main(void)
 {
@@ -55,17 +56,19 @@ int		main(void)
 	Enemy(100, "JOHN DOE"); //possible to make "default" enemy
 	Enemy* SM = new SuperMutant();
 	RadScorpion* RS = new RadScorpion();
-	std::cout << (*SM) << (*RS);
+	Enemy2* EN = new Enemy2();
+	std::cout << (*SM) << (*RS) << (*EN);
 	(*SM).takeDamage(10); //will take 3 less damage
 	(*RS).takeDamage(10);
-	std::cout << (*SM) << (*RS);
+	(*EN).takeDamage(10);
+	std::cout << (*SM) << (*RS) << (*EN);
 	std::cout << "\033[1;31mLet's fight\033[0m" << std::endl;
 	me2->equip(&g);
 	std::cout << *me2 << *SM;
 	me2->attack(SM);
 	me2->equip(pf);
 	std::cout << *me2 << *SM;
-	me2->attack(SM);
+	me2->attack(EN);
 	std::cout << *me2 << *SM;
 	me2->attack(SM); //from here not enough AP left
 	me2->attack(SM);

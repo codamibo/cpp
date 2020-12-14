@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/10 11:18:31 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/12/10 11:19:10 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/12/14 14:09:22 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class PowerFist : public AWeapon{
 	public:
 		PowerFist(void);
 		PowerFist(PowerFist const & cpy);
-		~PowerFist(void);
+		virtual ~PowerFist(void);
 		PowerFist &		operator=(PowerFist const & rhs);
 
 		void				attack() const;

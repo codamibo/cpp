@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/12 20:42:09 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/12/13 16:43:46 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/12/14 14:23:22 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ class Character : public ICharacter
 
 	public:
 		Character(std::string name);
-		~Character(void);
+		virtual ~Character(void);
 		Character(Character const & cpy);
 		Character &				operator=(Character const & rhs);
 		std::string const &		getName(void) const;

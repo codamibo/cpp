@@ -1,34 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   TacticalMarine.hpp                                 :+:    :+:            */
+/*   Enemy2.hpp                                         :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/12/10 18:36:24 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/12/14 14:22:34 by iboeters      ########   odam.nl         */
+/*   Created: 2020/12/14 14:10:13 by iboeters      #+#    #+#                 */
+/*   Updated: 2020/12/14 14:12:33 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef TACTICALMARINE_HPP
-# define TACTICALMARINE_HPP
+#ifndef ENEMY2_HPP
+# define ENEMY2_HPP
 
 #include <string>
 #include <iostream>
-#include <vector>
-#include "ISpaceMarine.hpp"
+#include "Enemy.hpp"
 
-
-class TacticalMarine : public ISpaceMarine{
+class Enemy2 : public Enemy{
 	public:
-		TacticalMarine(void);
-		TacticalMarine(TacticalMarine const &);
-		virtual ~TacticalMarine(void);
-		TacticalMarine &	operator=(TacticalMarine const &);
-		ISpaceMarine*		clone(void) const;
-		void				battleCry(void) const;
-		void				rangedAttack(void) const;
-		void				meleeAttack(void) const;
+		Enemy2(void);
+		Enemy2(Enemy2 const & cpy);
+		virtual ~Enemy2(void);
+		Enemy2 &		operator=(Enemy2 const & rhs);
+
+		void				takeDamage(const int damage);
+
 };
+
+std::ostream &		operator<<(std::ostream & output_stream, Enemy2 const & Enemy2);
 
 #endif
