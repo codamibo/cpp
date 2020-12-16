@@ -6,7 +6,7 @@
 #    By: iboeters <iboeters@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/12/09 11:29:07 by iboeters      #+#    #+#                  #
-#    Updated: 2020/12/12 22:21:12 by iboeters      ########   odam.nl          #
+#    Updated: 2020/12/14 21:52:08 by iboeters      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ SRCS =	main.cpp\
 		Peon.cpp\
 		Peon2.cpp
 OBJS = ${SRCS:%.cpp=%.o}
-FLAGS= -Wall -Werror -Wextra
+FLAGS= -Wall -Werror -Wextra -std=c++98
 COMPILE = clang++
 
 PINK = \033[38;2;255;204;213m

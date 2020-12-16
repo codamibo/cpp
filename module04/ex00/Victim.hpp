@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/09 15:30:05 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/12/10 10:24:19 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/12/14 21:29:03 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 class Victim{
 	private:
 		Victim(void); // or Victim(void) = delete; as public member = c11 extension
-		std::string _name;
+		std::string	_name;
 
 	public:
 		Victim(std::string name);

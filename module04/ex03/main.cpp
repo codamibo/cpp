@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/11 16:50:45 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/12/13 18:41:34 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/12/16 16:02:45 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@
 #include "Character.hpp"
 #include "IMateriaSource.hpp"
 #include "MateriaSource.hpp"
+#include <stdio.h>
+#include <string.h>
 
 int		main(void)
 {
@@ -33,6 +35,7 @@ int		main(void)
 	AMateria* tmp;
 	tmp = src->createMateria("ice");
 	me->equip(tmp);
+	delete tmp;
 	tmp = src->createMateria("cure");
 	me->equip(tmp);
 	ICharacter* bob = new Character("bob");
@@ -41,6 +44,7 @@ int		main(void)
 	delete bob;
 	delete me;
 	delete src;
+	delete tmp;
 	
 	std::cout << "\033[1;31m\nOwn tests\033[0m" << std::endl;
 	Character* ch = new Character("ch");
@@ -50,7 +54,7 @@ int		main(void)
 	ch->equip(tmp1);
 	ch->equip(tmp2);
 	ch->equip(tmp1);
-	ch->equip(tmp2); // doesn't work: inventory is full
+	ch->equip(tmp2);
 	ch->equip(tmp2); // doesn't work: inventory is full
 	ch->unequip(0); // cure will be erased from inventory
 	std::cout << ch->getMaterias()[0]->getXP() << std::endl;
@@ -72,7 +76,7 @@ int		main(void)
 	cpy->use(0, *jan);
 	cpy->use(1, *jan);
 	Character* assign = new Character("another one");
-	assign->equip(tmp1); // this inventory will be deleted by assigning next line
+	assign->equip(tmp1); // this inventory will be deleted by assigning on next line (no leaks)
 	*assign = *henk;
 	assign->use(0, *jan);
 	assign->use(1, *jan);
@@ -87,8 +91,8 @@ int		main(void)
 	src2->learnMateria(tmp5);
 	AMateria* tmp6 = src2->createMateria("ice");
 	src2->learnMateria(tmp6);
-	if(src2->createMateria("iceicebaby") == 0)
-		std::cout << "failed to create materia" << std::endl; // 0 is returned
+	if (src2->createMateria("iceicebaby") == 0)
+		std::cout << "Failed to create materia" << std::endl; // 0 is returned
 	src2->learnMateria(tmp3); // doesn't work: learned materias is full
 	assign->equip(tmp3);
 	std::cout << assign->getMaterias()[2]->getXP() << std::endl;
@@ -102,9 +106,5 @@ int		main(void)
 	delete tmp1;
 	delete tmp2;
 	delete src2;
-	// while (1) //check for leaks
-	// {
-		
-	// }
 	return (0);
 }

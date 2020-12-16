@@ -6,7 +6,7 @@
 #    By: iboeters <iboeters@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/12/10 10:23:23 by iboeters      #+#    #+#                  #
-#    Updated: 2020/12/13 18:24:01 by iboeters      ########   odam.nl          #
+#    Updated: 2020/12/14 21:52:33 by iboeters      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ SRCS =	main.cpp\
 		Character.cpp\
 		MateriaSource.cpp
 OBJS = ${SRCS:%.cpp=%.o}
-FLAGS=
+FLAGS= -Wall -Werror -Wextra -std=c++98
 COMPILE = clang++
 
 PINK = \033[38;2;255;204;213m

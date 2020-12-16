@@ -6,13 +6,13 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/14 14:10:16 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/12/14 14:14:38 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/12/15 10:42:54 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Enemy2.hpp"
 
-Enemy2::Enemy2() : Enemy(170, "Enemy 2")
+Enemy2::Enemy2() : Enemy(100, "Enemy 2")
 {
 	std::cout << "Enemy2 born" << std::endl;
 	return ;
@@ -25,7 +25,7 @@ Enemy2::Enemy2(Enemy2 const & cpy) : Enemy(cpy)
 
 Enemy2::~Enemy2(void)
 {
-	std::cout << "Enemmy dying..." << std::endl;
+	std::cout << "Enemy2 dying..." << std::endl;
 	return ;
 }
 
@@ -44,6 +44,6 @@ void				Enemy2::takeDamage(const int damage)
 
 std::ostream &		operator<<(std::ostream & output_stream, Enemy2 const &Enemy2)
 {
-	output_stream << Enemy2.getType() << "	| HP: " << Enemy2.getHP() << std::endl;
+	output_stream << Enemy2.getType() << "		| HP: " << Enemy2.getHP() << std::endl;
 	return (output_stream);
 }

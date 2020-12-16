@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/10 10:17:57 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/12/14 14:16:22 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/12/16 16:02:18 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int		main(void)
 
 	std::cout << "\033[1;31m\nOwn tests\033[0m" << std::endl;
 	me->attack(b);
-	Character* me2 = new Character(*me);
+	Character* me2 = new Character(*me); //cpy const
 	std::cout << (*me2);
 	me->equip(pf);
 	*me2 = *me; //assignment operator
@@ -91,9 +91,6 @@ int		main(void)
 	// delete b; //is deleted by me
 	delete SM;
 	delete RS;
-	// while (1) // check for leaks
-	// {
-		
-	// }
+	delete EN;
 	return (0);
 }

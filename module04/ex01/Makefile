@@ -6,7 +6,7 @@
 #    By: iboeters <iboeters@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/12/10 10:23:23 by iboeters      #+#    #+#                  #
-#    Updated: 2020/12/14 14:13:48 by iboeters      ########   odam.nl          #
+#    Updated: 2020/12/14 21:52:16 by iboeters      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ SRCS =	main.cpp\
 		Grenade.cpp\
 		Enemy2.cpp
 OBJS = ${SRCS:%.cpp=%.o}
-FLAGS= -Wall -Werror -Wextra
+FLAGS= -Wall -Werror -Wextra -std=c++98
 COMPILE = clang++
 
 PINK = \033[38;2;255;204;213m

@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/08 16:28:24 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/12/14 14:07:25 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/12/14 21:28:59 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@
 class Sorcerer{
 	private:
 		Sorcerer(void);
-		std::string _name;
-		std::string _title;
+		std::string	_name;
+		std::string	_title;
 
 	public:
 		Sorcerer(std::string name, std::string title);
