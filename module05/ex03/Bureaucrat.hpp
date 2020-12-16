@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/15 11:52:38 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/12/16 16:32:08 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/12/16 19:01:54 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@
 
 class Form;
 
-class Bureaucrat{
+class Bureaucrat
+{
 	private:
 		Bureaucrat(void);
 		std::string const	_name;

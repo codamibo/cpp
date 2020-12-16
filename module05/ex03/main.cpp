@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/15 11:52:36 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/12/16 18:50:49 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/12/16 20:51:23 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include "PresidentialPardonForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "ShrubberyCreationForm.hpp"
+#include "Intern.hpp"
 
 int		main(void)
 {
@@ -80,5 +81,19 @@ int		main(void)
 	std::cout << f3;
 	f3.signForm(best);
 	best.executeForm(f3);
+
+	std::cout << "\033[1;31m\nTest:	Intern\033[0m" << std::endl;
+	Intern someRandomIntern;
+	Form *form;
+	form = someRandomIntern.makeForm("robotomy request", "Bender");
+	std::cout << *form;
+	delete form;
+	form = someRandomIntern.makeForm("presidential pardon", "Bender");
+	std::cout << *form;
+	delete form;
+	form = someRandomIntern.makeForm("shrubbery creation", "Bender");
+	std::cout << *form;
+	delete form;
+	form = someRandomIntern.makeForm("unknown name", "TARGET"); //file name that doesn't exist
 	return (0);
 }
