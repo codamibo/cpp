@@ -6,13 +6,13 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/16 11:20:27 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/12/16 17:22:11 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/12/17 10:15:17 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RobotomyRequestForm.hpp"
 
-RobotomyRequestForm::RobotomyRequestForm(std::string const target) : Form("RobotomyRequestForm", 72, 45, target)
+RobotomyRequestForm::RobotomyRequestForm(const std::string target) : Form("RobotomyRequestForm", 72, 45, target)
 {
 	return ;
 }
@@ -40,7 +40,7 @@ void						RobotomyRequestForm::execute(Bureaucrat const & executor) const
 
 	try
 	{
-		Form::doExecute(executor);
+		Form::beExecuted(executor);
 	}
 	catch (std::exception & e)
 	{

@@ -6,13 +6,13 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/16 10:04:11 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/12/16 13:56:53 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/12/17 09:58:10 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
 
-Form::Form(std::string const name, int const gradeSign, int const gradeExecute):
+Form::Form(const std::string name, int const gradeSign, int const gradeExecute):
 _name(name), _signed(0), _gradeSign(gradeSign), _gradeExecute(gradeExecute)
 {
 	if (_gradeSign < 1 || _gradeExecute < 1)
@@ -25,10 +25,6 @@ _name(name), _signed(0), _gradeSign(gradeSign), _gradeExecute(gradeExecute)
 Form::Form(Form const & cpy) :
 _name(cpy._name), _signed(0), _gradeSign(cpy._gradeSign), _gradeExecute(cpy._gradeExecute)
 {
-	if (_gradeSign < 1 || _gradeExecute < 1)
-		throw Form::GradeTooHighException();
-	else if (_gradeSign > 150 || _gradeExecute > 150)
-		throw Form::GradeTooLowException();
 	return ;
 }
 
@@ -46,7 +42,7 @@ Form &				Form::operator=(Form const & rhs)
 	return (*this);
 }
 
-std::string const	Form::getName(void) const
+const std::string	Form::getName(void) const
 {
 	return (_name);
 }

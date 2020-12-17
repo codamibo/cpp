@@ -6,14 +6,14 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/16 10:04:11 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/12/16 16:31:55 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/12/17 10:15:17 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
 #include "Bureaucrat.hpp"
 
-Form::Form(std::string const name, int const gradeSign, int const gradeExecute, std::string const target) :
+Form::Form(const std::string name, int const gradeSign, int const gradeExecute, const std::string target) :
 _name(name), _signed(0), _gradeSign(gradeSign), _gradeExecute(gradeExecute), _target(target)
 {
 	if (_gradeSign < 1 || _gradeExecute < 1)
@@ -47,7 +47,7 @@ Form &				Form::operator=(Form const & rhs)
 	return (*this);
 }
 
-std::string const	Form::getName(void) const
+const std::string	Form::getName(void) const
 {
 	return (_name);
 }
@@ -67,7 +67,7 @@ int					Form::getGradeExecute(void) const
 	return (_gradeExecute);
 }
 
-std::string const	Form::getTarget(void) const
+const std::string	Form::getTarget(void) const
 {
 	return (_target);
 }
@@ -97,7 +97,7 @@ void				Form::signForm(Bureaucrat const & b)
 	return ;
 }
 
-void				Form::doExecute(Bureaucrat const & executor) const
+void				Form::beExecuted(Bureaucrat const & executor) const
 {
 	if (executor.getGrade() > _gradeExecute)
 		throw Form::GradeTooLowException();

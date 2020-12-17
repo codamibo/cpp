@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/16 10:04:09 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/12/16 15:28:04 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/12/17 10:15:17 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,27 +23,27 @@ class Form
 {
 	private:
 		Form(void);
-		std::string const	_name;
+		const std::string	_name;
 		bool				_signed;
 		const int			_gradeSign;
 		const int			_gradeExecute;
 		std::string	const	_target;
 
 	public:
-		Form(std::string const name, int const gradeSign, int const gradeExecute, std::string const target);
+		Form(const std::string name, int const gradeSign, int const gradeExecute, const std::string target);
 		Form(Form const & cpy);
 		virtual ~Form(void);
 		Form &		operator=(Form const & rhs);
 
-		std::string const	getName(void) const;
+		const std::string	getName(void) const;
 		bool				getSigned(void) const;
 		int					getGradeSign(void) const;
 		int					getGradeExecute(void) const;
-		std::string const	getTarget(void) const;
+		const std::string	getTarget(void) const;
 
 		void				beSigned(Bureaucrat const & b);
 		void				signForm(Bureaucrat const & b);
-		void				doExecute(Bureaucrat const & executor) const;
+		void				beExecuted(Bureaucrat const & executor) const;
 		virtual void		execute(Bureaucrat const & executor) const = 0;
 
 		class GradeTooHighException : public std::exception

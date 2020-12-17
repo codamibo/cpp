@@ -6,13 +6,13 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/16 11:20:46 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/12/16 17:22:29 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/12/17 10:15:17 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PresidentialPardonForm.hpp"
 
-PresidentialPardonForm::PresidentialPardonForm(std::string const target) : Form("PresidentialPardonForm", 25, 5, target)
+PresidentialPardonForm::PresidentialPardonForm(const std::string target) : Form("PresidentialPardonForm", 25, 5, target)
 {
 	return ;
 }
@@ -37,7 +37,7 @@ void						PresidentialPardonForm::execute(Bureaucrat const & executor) const
 {
 	try
 	{
-		Form::doExecute(executor);
+		Form::beExecuted(executor);
 	}
 	catch (std::exception & e)
 	{

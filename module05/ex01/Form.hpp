@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/16 10:04:09 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/12/16 11:38:28 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/12/17 09:56:00 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,18 +22,18 @@ class Form
 {
 	private:
 		Form(void);
-		std::string const	_name;
+		const std::string	_name;
 		bool				_signed;
 		const int			_gradeSign;
 		const int			_gradeExecute;
 
 	public:
-		Form(std::string const name, int const gradeSign, int const gradeExecute);
+		Form(const std::string name, int const gradeSign, int const gradeExecute);
 		Form(Form const & cpy);
 		~Form(void);
 		Form &		operator=(Form const & rhs);
 
-		std::string const	getName(void) const;
+		const std::string	getName(void) const;
 		bool				getSigned(void) const;
 		int					getGradeSign(void) const;
 		int					getGradeExecute(void) const;

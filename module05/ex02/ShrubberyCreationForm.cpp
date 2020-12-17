@@ -6,13 +6,13 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/16 11:20:07 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/12/16 17:27:21 by iboeters      ########   odam.nl         */
+/*   Updated: 2020/12/17 10:15:17 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ShrubberyCreationForm.hpp"
 
-ShrubberyCreationForm::ShrubberyCreationForm(std::string const target) : Form("ShrubberyCreationForm", 145, 137, target)
+ShrubberyCreationForm::ShrubberyCreationForm(const std::string target) : Form("ShrubberyCreationForm", 145, 137, target)
 {
 	return ;
 }
@@ -40,7 +40,7 @@ void						ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 
 	try
 	{
-		Form::doExecute(executor);
+		Form::beExecuted(executor);
 	}
 	catch (std::exception & e)
 	{
