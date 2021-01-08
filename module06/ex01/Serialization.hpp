@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/27 22:07:17 by iboeters      #+#    #+#                 */
-/*   Updated: 2021/01/04 17:26:42 by iboeters      ########   odam.nl         */
+/*   Updated: 2021/01/08 10:08:05 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,22 +20,20 @@
 #include <cstdlib> //rand
 
 struct Data {
-	std::string s1;
-	int n;
-	std::string s2;
+	std::string		s1;
+	int 			n;
+	std::string		s2;
 };
 
 class Serialization
 {
-	private:
-
 	public:
 		Serialization(void);
 		~Serialization(void);
 		Serialization(Serialization const & cpy);
 		Serialization &		operator=(Serialization const & rhs);
-		void *serialize(void);
-		Data *deserialize(void *raw);
+		void *				serialize(void);
+		Data *				deserialize(void *raw);
 };
 
 #endif

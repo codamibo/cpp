@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/24 16:58:44 by iboeters      #+#    #+#                 */
-/*   Updated: 2020/12/27 22:01:55 by iboeters      ########   odam.nl         */
+/*   Updated: 2021/01/08 11:10:33 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include <cstdio>
 #include <limits>
 
-//ascii 0-31 are non-displayable characters
+//ascii 0-31 and > 126 are non-displayable characters
 
 void	print_char(std::string input)
 {
@@ -41,7 +41,7 @@ void	print_digit(std::string input, int inf_nan)
 	double d = static_cast<double>(input_num);
 	if (inf_nan == 1)
 		std::cout << "char: impossible" << std::endl;
-	else if (c <= 31 || i > 255)
+	else if (input_num < std::numeric_limits<char>::min() || input_num > std::numeric_limits<char>::max() || !isprint(c))
 		std::cout << "char: Non displayable" << std::endl;
 	else
 		std::cout << "char: '" << c << "'" << std::endl;

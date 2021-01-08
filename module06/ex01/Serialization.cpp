@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/27 22:07:15 by iboeters      #+#    #+#                 */
-/*   Updated: 2021/01/06 15:00:29 by iboeters      ########   odam.nl         */
+/*   Updated: 2021/01/08 10:23:46 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void 				*Serialization::serialize(void)
 
 	char const *alphanum = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 	float fraction = 1 / static_cast<float>(RAND_MAX);
-	int index = 0;
+	int index;
 	std::cout << "new s1: ";
 	for (int i = 0; i < 20; i++)
 	{
@@ -63,7 +63,7 @@ void 				*Serialization::serialize(void)
 	}
 	int i = rand() % std::numeric_limits<int>::max();
 	std::cout << std::endl << "new n = " << i << std::endl;
-	reinterpret_cast<int *>(ret)[8] = i;
+	reinterpret_cast<int *>(ret)[2] = i;
 	return (reinterpret_cast<void *>(ret));
 }
 
@@ -71,8 +71,8 @@ Data				*Serialization::deserialize(void *raw)
 {
 	Data *ret = new Data;
 
-	ret->s1 = std::string(reinterpret_cast<char *>(raw), 8);
-	ret->n = reinterpret_cast<int *>(raw)[8];
+	ret->s1 = std::string(static_cast<char *>(raw), 8);
+	ret->n = reinterpret_cast<int *>(raw)[2];
 	ret->s2 = std::string(reinterpret_cast<char *>(raw) + 12, 8);
-	return (ret);	
+	return (ret);
 }

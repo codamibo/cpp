@@ -1,22 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   Base.hpp                                           :+:    :+:            */
+/*   A.hpp                                              :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/01/04 17:25:11 by iboeters      #+#    #+#                 */
-/*   Updated: 2021/01/08 10:38:28 by iboeters      ########   odam.nl         */
+/*   Created: 2021/01/08 10:30:57 by iboeters      #+#    #+#                 */
+/*   Updated: 2021/01/08 10:32:21 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BASE_HPP
-# define BASE_HPP
+#ifndef A_HPP
+# define A_HPP
 
-class Base
-{
-	public:
-		virtual ~Base(void);
-};
+#include "Base.hpp"
+
+class A : public Base{};
 
 #endif
