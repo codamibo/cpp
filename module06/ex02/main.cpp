@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/04 17:32:26 by iboeters      #+#    #+#                 */
-/*   Updated: 2021/01/08 11:36:53 by iboeters      ########   odam.nl         */
+/*   Updated: 2021/01/08 11:45:15 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,5 +106,14 @@ int		main(void)
 	std::cout << "Identified from reference: ";
 	identify_from_reference(ref);
 	delete random_base;
+
+	Base *random_base2;
+	random_base2 = generate();
+	Base& ref2 = *random_base2;
+	std::cout << "Identified from pointer: ";
+	identify_from_pointer(random_base2);
+	std::cout << "Identified from reference: ";
+	identify_from_reference(ref2);
+	delete random_base2;
 	return (0);
 }
