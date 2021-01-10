@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/04 17:32:26 by iboeters      #+#    #+#                 */
-/*   Updated: 2021/01/08 11:45:15 by iboeters      ########   odam.nl         */
+/*   Updated: 2021/01/10 12:38:40 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,12 +86,12 @@ void	identify_from_reference(Base & p)
 	else if (array[2] == 1)
 		std::cout << "C" << std::endl;
 	else
-		std::cout << "Type not found" << std::endl;		
+		std::cout << "Type not found" << std::endl;
 }
 
 int		main(void)
 {
-	std::srand(std::rand() + time(0));
+	std::srand(time(0));
 	std::cout << "Base without a type: " << std::endl;
 	Base base;
 	identify_from_pointer(&base);

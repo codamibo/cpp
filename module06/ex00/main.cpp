@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/24 16:58:44 by iboeters      #+#    #+#                 */
-/*   Updated: 2021/01/08 11:10:33 by iboeters      ########   odam.nl         */
+/*   Updated: 2021/01/10 12:13:17 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,16 +64,29 @@ void	print_digit(std::string input, int inf_nan)
 
 int			valid_digit(std::string input)
 {
-	unsigned int i = 0;
+	unsigned int	i = 0;
+	int				f = 0;
 
 	if (input[i] == '-' || input[i] == '+')
 		i++;
 	while (isdigit(input[i]))
 		i++;
 	if (input[i] == '.')
+	{
 		i++;
-	while (isdigit(input[i]))
-		i++;
+		while (isdigit(input[i]))
+			i++;
+		if (input[i] == 'f')
+		{
+			i++;
+			f = 1;
+		}
+	}
+	if (f == 0)
+	{
+		while (isdigit(input[i]))
+			i++;
+	}
 	if (i == input.length())
 		return (1);
 	return (0);

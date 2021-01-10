@@ -6,13 +6,12 @@
 #    By: iboeters <iboeters@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/12/15 13:21:22 by iboeters      #+#    #+#                  #
-#    Updated: 2021/01/08 10:36:44 by iboeters      ########   odam.nl          #
+#    Updated: 2021/01/10 12:18:06 by iboeters      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = series
-SRCS =	main.cpp\
-		Serialization.cpp
+SRCS =	main.cpp
 OBJS = ${SRCS:%.cpp=%.o}
 FLAGS= -Wall -Werror -Wextra -std=c++98
 COMPILE = clang++
