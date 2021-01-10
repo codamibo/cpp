@@ -6,7 +6,7 @@
 #    By: iboeters <iboeters@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/12/15 13:21:22 by iboeters      #+#    #+#                  #
-#    Updated: 2021/01/05 17:50:57 by iboeters      ########   odam.nl          #
+#    Updated: 2021/01/08 10:37:32 by iboeters      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,7 @@ $(NAME): $(OBJS)
 
 clean:
 	@echo "$(BG_GREY)$(GREY)Deleting $(OBJS)$(RESET)"
-	@rm -f $(OBJS) *_shrubbery
+	@rm -f $(OBJS)
 
 fclean: clean
 	@echo "$(BG_GREY)$(GREY)Deleting $(NAME)$(RESET)"
