@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/07 14:56:35 by iboeters      #+#    #+#                 */
-/*   Updated: 2021/01/11 21:13:54 by iboeters      ########   odam.nl         */
+/*   Updated: 2021/01/11 21:55:34 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,6 @@ class	MutantStack : public std::stack<T>
 		{
 			return (this->c.rend());
 		};
-	private:
 };
 
 #endif

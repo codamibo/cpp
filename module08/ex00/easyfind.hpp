@@ -6,9 +6,12 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/07 10:48:15 by iboeters      #+#    #+#                 */
-/*   Updated: 2021/01/11 21:30:47 by iboeters      ########   odam.nl         */
+/*   Updated: 2021/01/11 21:56:21 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef EASYFIND_HPP
+# define EASYFIND_HPP
 
 #include <algorithm>
 #include <exception>
@@ -33,3 +36,5 @@ typename T::const_iterator		easyfind(T const & container, int const find)
 	throw NotFoundException();
 	return (it);
 }
+
+#endif

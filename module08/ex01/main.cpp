@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/07 11:40:25 by iboeters      #+#    #+#                 */
-/*   Updated: 2021/01/11 21:35:25 by iboeters      ########   odam.nl         */
+/*   Updated: 2021/01/11 21:51:23 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ int		main(void)
 	std::cout << sp3 << std::endl;
 	std::cout << "longest span: "<< sp2.longestSpan() << std::endl;
 	std::cout << "shortest span: " << sp2.shortestSpan() << std::endl;
-	
+
 	std::cout << "\033[1;31m\nTest:	more than 10000 numbers\033[0m" << std::endl;
 	Span sp4(10001);
 	std::vector<int>::const_iterator it = sp4.getArray().begin();

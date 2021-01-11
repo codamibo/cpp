@@ -6,12 +6,11 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/07 11:36:45 by iboeters      #+#    #+#                 */
-/*   Updated: 2021/01/11 21:35:47 by iboeters      ########   odam.nl         */
+/*   Updated: 2021/01/11 21:52:52 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "span.hpp"
-#include <algorithm>
 
 Span::Span(unsigned int n) : _n(n), _added(0)
 {
