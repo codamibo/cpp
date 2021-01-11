@@ -6,13 +6,12 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/07 10:48:15 by iboeters      #+#    #+#                 */
-/*   Updated: 2021/01/07 11:35:14 by iboeters      ########   odam.nl         */
+/*   Updated: 2021/01/11 21:30:47 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <list>
 #include <algorithm>
+#include <exception>
 
 class NotFoundException : public std::exception
 {

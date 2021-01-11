@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/07 11:36:44 by iboeters      #+#    #+#                 */
-/*   Updated: 2021/01/07 13:15:07 by iboeters      ########   odam.nl         */
+/*   Updated: 2021/01/11 21:35:57 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,15 @@ class Span{
 		Span(unsigned int n);
 		~Span(void);
 		Span(Span const & cpy);
-		Span &				operator=(Span const & rhs);
-		void				addNumber(int n);
-		int					shortestSpan(void);
-		int					longestSpan(void);
-		std::vector<int>	getArray(void) const;
-		unsigned int		getAdded(void) const;
-		class				NotEnoughNumbersException : public std::exception
+		Span &						operator=(Span const & rhs);
+		void						addNumber(int n);
+		int							shortestSpan(void);
+		int							longestSpan(void);
+		std::vector<int> const &	getArray(void) const;
+		unsigned int				getAdded(void) const;
+		void						addNumbersByRange(std::vector<int>::const_iterator it, std::vector<int>::const_iterator it_end);
+
+		class						NotEnoughNumbersException : public std::exception
 		{
 			public:
 				const char * what() const throw ()

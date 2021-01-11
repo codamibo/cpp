@@ -6,7 +6,7 @@
 #    By: iboeters <iboeters@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/12/15 13:21:22 by iboeters      #+#    #+#                  #
-#    Updated: 2021/01/07 15:26:32 by iboeters      ########   odam.nl          #
+#    Updated: 2021/01/11 20:43:25 by iboeters      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,6 @@ SRCS =	main.cpp\
 		mutantstack.cpp
 OBJS = ${SRCS:%.cpp=%.o}
 FLAGS= -Wall -Werror -Wextra -std=c++98
-COMPILE = clang++
 
 PINK = \033[38;2;255;204;213m
 GREY = \033[38;2;100;100;100m
@@ -35,7 +34,7 @@ $(NAME): $(OBJS)
 
 clean:
 	@echo "$(BG_GREY)$(GREY)Deleting $(OBJS)$(RESET)"
-	@rm -f $(OBJS) *_shrubbery
+	@rm -f $(OBJS)
 
 fclean: clean
 	@echo "$(BG_GREY)$(GREY)Deleting $(NAME)$(RESET)"

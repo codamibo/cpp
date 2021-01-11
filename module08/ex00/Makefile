@@ -6,7 +6,7 @@
 #    By: iboeters <iboeters@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/12/15 13:21:22 by iboeters      #+#    #+#                  #
-#    Updated: 2021/01/07 11:05:55 by iboeters      ########   odam.nl          #
+#    Updated: 2021/01/11 15:48:01 by iboeters      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,6 @@ NAME = ex00
 SRCS =	main.cpp
 OBJS = ${SRCS:%.cpp=%.o}
 FLAGS= -Wall -Werror -Wextra -std=c++98
-COMPILE = clang++
 
 PINK = \033[38;2;255;204;213m
 GREY = \033[38;2;100;100;100m
@@ -34,7 +33,7 @@ $(NAME): $(OBJS)
 
 clean:
 	@echo "$(BG_GREY)$(GREY)Deleting $(OBJS)$(RESET)"
-	@rm -f $(OBJS) *_shrubbery
+	@rm -f $(OBJS)
 
 fclean: clean
 	@echo "$(BG_GREY)$(GREY)Deleting $(NAME)$(RESET)"

@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/24 16:58:44 by iboeters      #+#    #+#                 */
-/*   Updated: 2021/01/10 12:13:17 by iboeters      ########   odam.nl         */
+/*   Updated: 2021/01/10 13:14:10 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,12 +66,16 @@ int			valid_digit(std::string input)
 {
 	unsigned int	i = 0;
 	int				f = 0;
+	int				d = 0;
 
 	if (input[i] == '-' || input[i] == '+')
 		i++;
 	while (isdigit(input[i]))
+	{
 		i++;
-	if (input[i] == '.')
+		d = 1;
+	}
+	if (input[i] == '.' && d == 1)
 	{
 		i++;
 		while (isdigit(input[i]))

@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/27 22:02:34 by iboeters      #+#    #+#                 */
-/*   Updated: 2021/01/10 12:31:10 by iboeters      ########   odam.nl         */
+/*   Updated: 2021/01/10 13:10:05 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ int		main(void)
 	void 	*a;
 	Data	*b;
 
-	std::srand(time(0));
+	std::srand(std::rand() + time(0));
 	a = serialize();
 	b = deserialize(a);
 	std::cout << std::endl;

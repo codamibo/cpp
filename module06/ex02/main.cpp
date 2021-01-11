@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/04 17:32:26 by iboeters      #+#    #+#                 */
-/*   Updated: 2021/01/10 12:38:40 by iboeters      ########   odam.nl         */
+/*   Updated: 2021/01/10 13:02:38 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ Base	*generate(void)
 	int class_type;
 
 	class_type = std::rand() % 3;
-	std::cout << "Generated type : ";
+	std::cout << "Generated type: ";
 	if (class_type == 0)
 	{
 		std::cout << "A" << std::endl;
@@ -91,7 +91,7 @@ void	identify_from_reference(Base & p)
 
 int		main(void)
 {
-	std::srand(time(0));
+	std::srand(std::rand() + time(0));
 	std::cout << "Base without a type: " << std::endl;
 	Base base;
 	identify_from_pointer(&base);
