@@ -6,14 +6,13 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/07 14:56:34 by iboeters      #+#    #+#                 */
-/*   Updated: 2021/01/11 21:37:35 by iboeters      ########   odam.nl         */
+/*   Updated: 2021/01/12 10:53:24 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mutantstack.hpp"
 #include <stack>
 #include <iostream>
-#include <list>
 #include <cstdlib>
 
 int		main(void)
@@ -109,12 +108,7 @@ int		main(void)
 	std::cout << std::endl;
 	
 	std::cout << "\033[1;31m\nTest:	const iterator (strings)\033[0m" << std::endl;
-	MutantStack<std::string> mstack6;
-	mstack6.push("hi");
-	mstack6.push("hey");
-	mstack6.push("hello");
-	mstack6.push("hola");
-	mstack6.push("hoi");
+	MutantStack<std::string> mstack6(mstack5);
 	MutantStack<std::string>::const_iterator it6 = mstack6.begin();
 	MutantStack<std::string>::const_iterator ite6 = mstack6.end();
 	std::cout << "|";
@@ -124,6 +118,7 @@ int		main(void)
 		++it6;
 	}
 	std::cout << std::endl;
+
 	std::cout << "\033[1;31m\nTest:	reverse iterator (strings)\033[0m" << std::endl;
 	MutantStack<std::string>::reverse_iterator it7 = mstack6.rbegin();
 	MutantStack<std::string>::reverse_iterator ite7 = mstack6.rend();
@@ -134,6 +129,7 @@ int		main(void)
 		++it7;
 	}
 	std::cout << std::endl;
+
 	std::cout << "\033[1;31m\nTest:	const reverse iterator (strings)\033[0m" << std::endl;
 	MutantStack<std::string>::const_reverse_iterator it8 = mstack6.rbegin();
 	MutantStack<std::string>::const_reverse_iterator ite8 = mstack6.rend();

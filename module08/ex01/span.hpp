@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/07 11:36:44 by iboeters      #+#    #+#                 */
-/*   Updated: 2021/01/11 21:35:57 by iboeters      ########   odam.nl         */
+/*   Updated: 2021/01/12 10:43:58 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,6 @@ class Span{
 		};
 };
 
-std::ostream &				operator<<(std::ostream & output, Span const &rhs);
+std::ostream &				operator<<(std::ostream & output, Span const & rhs);
 
 #endif

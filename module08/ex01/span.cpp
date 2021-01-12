@@ -6,7 +6,7 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/07 11:36:45 by iboeters      #+#    #+#                 */
-/*   Updated: 2021/01/11 21:52:52 by iboeters      ########   odam.nl         */
+/*   Updated: 2021/01/12 10:45:16 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ int					Span::shortestSpan(void)
 		throw NotEnoughNumbersException();
 	std::sort(_array.begin(), _array.end());
 	span = _array[1] - _array[0];
-	for (unsigned int i = 1; i < _added; i++)
+	for (unsigned int i = 2; i < _added; i++)
 	{
 		if ((_array[i] - _array[i - 1]) < span)
 			span = _array[i] - _array[i - 1];

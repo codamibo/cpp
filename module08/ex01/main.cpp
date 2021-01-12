@@ -6,14 +6,14 @@
 /*   By: iboeters <iboeters@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/07 11:40:25 by iboeters      #+#    #+#                 */
-/*   Updated: 2021/01/11 21:51:23 by iboeters      ########   odam.nl         */
+/*   Updated: 2021/01/12 10:47:44 by iboeters      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "span.hpp"
 #include <iostream>
 #include <exception>
-#include <cstdlib> //rand
+#include <cstdlib>
 
 int		main(void)
 {
